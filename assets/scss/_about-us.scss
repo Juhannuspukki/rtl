@@ -1,6 +1,6 @@
 .ingress {
   text-align: center;
-  width: 512px;
+  max-width: 512px;
   margin: auto;
 }
 
@@ -9,6 +9,12 @@
   gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 4rem 0;
+  @media only screen and (max-width: 712px) {
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin: 4rem auto;
+  }
   p {
     font-family: $header-font;
     color: $light-color;
