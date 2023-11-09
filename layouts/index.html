@@ -1,0 +1,81 @@
+{{ define "main" }}
+
+<div class="container">
+  {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.banner) }}
+
+  {{ $resizedHero2560 := $imageResource.Resize "2560x q90 webp"}}
+  {{ $resizedHero1920 := $imageResource.Resize "1920x q90 webp"}}
+  {{ $resizedHero1280 := $imageResource.Resize "1280x q90 webp"}}
+  {{ $resizedHero768 := $imageResource.Resize "768x q90 webp"}}
+  {{ $resizedHero512 := $imageResource.Resize "512x q90 webp"}}
+
+  <header>
+    <img class="hero"
+         src="{{ $resizedHero512.RelPermalink }}"
+         srcset="{{ $resizedHero512.RelPermalink }} 512w,
+                   {{ $resizedHero768.RelPermalink }} 768w,
+                   {{ $resizedHero1280.RelPermalink }} 1280w,
+                   {{ $resizedHero1920.RelPermalink }} 1920w,
+                   {{ $resizedHero2560.RelPermalink }} 2560w"
+         aria-hidden="true"
+         alt="">
+    <h1>{{ .Title }} - {{ .Params.subtitle }}</h1>
+    <div class="cta-container">
+      <a class="cta" href="/contact">Start today with a free lesson</a>
+    </div>
+  </header>
+  <div class="reasons">
+    <h2>Why choose us for learning Thai?</h2>
+    <ul>
+      <li>
+        Highly trained, professional, qualified teachers. All our teachers are university educated and have many years of teaching experience.
+      </li>
+      <li>
+        Proven teaching method. You will be able to use the skills you learn immediately in everyday life.
+      </li>
+      <li>
+        Relaxed, friendly, informal environment. We have students from all over the world; you will make some great new friends!
+      </li>
+      <li>
+        Affordable courses. All our courses have a set price and a set amount of study hours.
+      </li>
+      <li>
+        Newly refurbished school. Fresh and clean with good facilities.
+      </li>
+      <li>
+        Small class sizes of from five to ten students.
+      </li>
+    </ul>
+  </div>
+  {{ partial "pricing" . }}
+  <div class="map-container">
+    <h2>
+      Convenient location
+    </h2>
+    <p class="subtitle">Our school is located in Mahatun Plaza, right next to Phloen Chit BTS station.</p>
+    <div id='map' class="map"></div>
+
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoianVoYW5udXNwdWtraSIsImEiOiJjbG9wZ3FoZXcwYTdxMmpzOGxhZzVpbDQ5In0.twIxNDghgLv71wGc_638_w';
+      const map = new mapboxgl.Map({
+        container: 'map',
+// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [100.54890672971189, 13.742535638835866],
+        zoom: 15
+      });
+
+      // Create a default Marker and add it to the map.
+      const marker1 = new mapboxgl.Marker()
+              .setLngLat([100.54890672971189, 13.742535638835866])
+              .addTo(map);
+
+
+      // Add zoom and rotation controls to the map.
+      map.addControl(new mapboxgl.NavigationControl());
+    </script>
+    <p class="subtitle">Online courses are also available!</p>
+  </div>
+</div>
+
+{{ end }}

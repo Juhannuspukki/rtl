@@ -1,0 +1,38 @@
+.courses-header {
+  .courses-hero {
+    float: right;
+    margin: 1rem;
+    max-width: 25rem;
+    border-radius: 1rem;
+  }
+  margin-bottom: 4rem;
+}
+
+.courses {
+  h2 {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+  .course-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4rem;
+    .course-card {
+      border-radius: 1rem;
+      border: 0.25rem $cheery-color solid;
+      h4 {
+        color: $cheery-color;
+        font-size: 1.5rem;
+        font-family: $header-font;
+        margin: 2rem 2rem 2rem;
+      }
+      p {
+        margin: 2rem;
+      }
+    }
+  }
+}

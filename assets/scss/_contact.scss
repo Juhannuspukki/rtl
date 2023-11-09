@@ -1,0 +1,73 @@
+.contact-grid {
+  max-width: 640px;
+  column-gap: 4rem;
+  row-gap: 2rem;
+  margin: 0 auto 4rem;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  @media only screen and (max-width: 712px) {
+    max-width: 320px;
+    grid-template-columns: 1fr;
+  }
+  .contact-card {
+    h2 {
+      text-align: left;
+      font-size: 1.5rem;
+    }
+    p {
+      font-weight: 700;
+      color: $light-color;
+      a {
+        color: $light-color;
+        text-decoration: underline;
+        &:hover {
+          color: $cheery-color;
+        }
+      }
+    }
+    form {
+      label {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+        color: $light-color;
+      }
+      input, textarea {
+        width: calc(100% - 2rem);
+        display: block;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid $light-color;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        font-family: $bread-font;
+        &::placeholder {
+          opacity: 0.6;
+        }
+      }
+      button {
+        display: inline-block;
+        cursor: pointer;
+        background-color: $cheery-color;
+        color: $background-color;
+        font-weight: 700;
+        font-size: 1rem;
+        border: 0.15rem solid $cheery-color;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+        &:hover {
+          background-color: $background-color;
+          color: $cheery-color;
+          border: 0.15rem solid $cheery-color;
+        }
+      }
+    }
+    .map {
+      width: 100%;
+      min-height: 300px;
+      border-radius: 1rem;
+      height: calc(100% - 5rem);
+    }
+  }
+}

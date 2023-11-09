@@ -1,0 +1,111 @@
+{{ define "main" }}
+
+    {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.banner) }}
+
+    {{ $resizedHero2560 := $imageResource.Resize "2560x q90 webp"}}
+    {{ $resizedHero1920 := $imageResource.Resize "1920x q90 webp"}}
+    {{ $resizedHero1280 := $imageResource.Resize "1280x q90 webp"}}
+    {{ $resizedHero768 := $imageResource.Resize "768x q90 webp"}}
+    {{ $resizedHero512 := $imageResource.Resize "512x q90 webp"}}
+
+    <header>
+        <div class="container">
+            <h1>Our Thai Courses</h1>
+            <div class="courses-header">
+                <img class="courses-hero"
+                     src="{{ $resizedHero512.RelPermalink }}"
+                     srcset="{{ $resizedHero512.RelPermalink }} 512w,
+                         {{ $resizedHero768.RelPermalink }} 768w,
+                         {{ $resizedHero1280.RelPermalink }} 1280w,
+                         {{ $resizedHero1920.RelPermalink }} 1920w,
+                         {{ $resizedHero2560.RelPermalink }} 2560w"
+                     aria-hidden="true"
+                     alt="">
+                {{ .Content }}
+            </div>
+        </div>
+    </header>
+
+    <main class="courses">
+        <h2>Course list</h2>
+        <section class="container">
+            <h3>Speaking</h3>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h4>Speaking level 1</h4>
+                    <p>
+                        Speaking Level 1 begins by teaching the student to pronounce Thai vowels and consonant sounds, along with the five tones unique to the Thai language. Students learn a phonetic writing system that is used to read and write Thai words. Students learn basic vocabulary and practice basic conversations covering topics ranging from introducing yourself, ordering food, asking directions, to expressing preferences and comparing things.
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h4>Speaking level 2</h4>
+                    <p>
+                        In Level 2, students expand their vocabulary and conversation skills. This course covers many new conversation patterns.Students will learn and practice topics ranging from geography, weather, and body parts, to emotions and seasons of the year and much more.
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h4>Speaking level 3</h4>
+                    <p>
+                        This course introduces the student to more speaking patterns and vocabulary. By the end of this course the student will have a strong foundation in the Thai language and be able to speak confidently in everyday conversation, having built up many conversation patterns and an extensive vocabulary. After completing this course, the student is ready to progress to learning reading and writing. For those students who do not wish to study reading and writing, but wish to developer a higher level of conversational skills, we offer two extra speaking courses; Level 4 speaking and Level 5 speaking.
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h4>Speaking level 4</h4>
+                    <p>
+                        This course introduces the student to more speaking patterns and vocabulary. By the end of this course the student will have a strong foundation in the Thai language and be able to speak confidently in everyday conversation, having built up many conversation patterns and an extensive vocabulary. After completing this course, the student is ready to progress to learning reading and writing. For those students who do not wish to study reading and writing, but wish to developer a higher level of conversational skills, we offer two extra speaking courses; Level 4 speaking and Level 5 speaking.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <h3>Reading and writing</h3>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h4>Reading level 1</h4>
+                    <p>
+                        This course introduces students to the Thai writing system. Students start to learn to read and write Thai consonants and vowels, while continuing to build on their vocabulary.
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h4>Reading level 2</h4>
+                    <p>
+                        Continuing form Reading and Writing Level 1, the students learn the remaining Thai consonants and vowels as well as the tone rules of the written Thai language. Knowledge of the Thai writing system, continues to add to the students vocabulary and conversation skills. Students’ writing skills are improved by daily dictation exercises and homework assignments.
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h4>Reading level 3</h4>
+                    <p>
+                        In this course students focus on the characteristics of the spoken Thai language. Level 3 introduces some spoken slang, some Thai idioms, and many commonly used phrases and expressions. Students continue to improve their reading skills by learning to read basic spoken conversations between two or more people. Dictation and homework assignments, also continue to build on the students’ vocabulary, listening, reading, and writing skills
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h4>Reading level 4</h4>
+                    <p>
+                        This course focuses on the characteristics of the written Thai language. Students read short essays about life in Thailand, and practice writing short essays. Topics include Thai fruits, the Chao Phraya River, and the famous Chatuchuk weekend market. Students’ listening and writing skills are enhanced by daily dictation exercises and homework assignments.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <h3>Advanced courses</h3>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h4>Social problems</h4>
+                    <p>
+                        This course introduces students to the Thai writing system. Students start to learn to read and write Thai consonants and vowels, while continuing to build on their vocabulary.
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h4>Newspaper 1</h4>
+                    <p>
+                        Continuing form Reading and Writing Level 1, the students learn the remaining Thai consonants and vowels as well as the tone rules of the written Thai language. Knowledge of the Thai writing system, continues to add to the students vocabulary and conversation skills. Students’ writing skills are improved by daily dictation exercises and homework assignments.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            {{ partial "pricing" . }}
+        </section>
+    </main>
+
+{{ end }}

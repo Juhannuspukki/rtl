@@ -1,0 +1,31 @@
+.visa-cards {
+  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto 4rem;
+  @media only screen and (max-width: 712px) {
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .visa-card {
+    border-radius: 1rem;
+    border: 0.25rem $cheery-color solid;
+    h3 {
+      text-align: center;
+      color: $cheery-color;
+      margin-bottom: 0.5rem;
+    }
+    .visa-card-subtitle {
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+      font-family: $header-font;
+      text-align: center;
+      color: $cheery-color;
+      font-weight: 700;
+    }
+  }
+  p {
+    margin: 1rem;
+  }
+}

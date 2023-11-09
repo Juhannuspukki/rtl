@@ -1,0 +1,24 @@
+.ingress {
+  text-align: center;
+  width: 512px;
+  margin: auto;
+}
+
+.khruu-cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 4rem 0;
+  p {
+    font-family: $header-font;
+    color: $light-color;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  img {
+    height: 20rem;
+    display: block;
+    margin: auto;
+  }
+}
