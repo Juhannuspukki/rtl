@@ -64,10 +64,12 @@
       }
     }
     .map {
+      display: block;
       width: 100%;
       min-height: 300px;
       border-radius: 1rem;
       height: calc(100% - 5rem);
+      object-fit: cover;
     }
   }
 }

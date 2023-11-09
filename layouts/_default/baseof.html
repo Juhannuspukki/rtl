@@ -10,8 +10,8 @@
   <meta property="og:url" content="{{ .Permalink }}" />
 
   <meta property="og:title" content="{{ $.Site.Title }} - {{ .Title }}" />
-  <meta name="description" content="Mies lännestä kertoo elämästä Thaimaassa.">
-  <meta property="og:description" content="Mies lännestä kertoo elämästä Thaimaassa.">
+  <meta name="description" content="Rak Thai Language School">
+  <meta property="og:description" content="Rak Thai Language School is fun, friendly and affordable!">
 
   {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.banner) }}
 
@@ -19,9 +19,6 @@
     {{ $resizedHero768 := $imageResource.Resize "768x q90 webp"}}
     <meta property="og:image" content="{{ $resizedHero768.RelPermalink }}">
   {{ end}}
-
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/apple-touch-icon-114x114.png" />

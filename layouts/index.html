@@ -53,27 +53,7 @@
       Convenient location
     </h2>
     <p class="subtitle">Our school is located in Mahatun Plaza, right next to Phloen Chit BTS station.</p>
-    <div id='map' class="map"></div>
-
-    <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoianVoYW5udXNwdWtraSIsImEiOiJjbG9wZ3FoZXcwYTdxMmpzOGxhZzVpbDQ5In0.twIxNDghgLv71wGc_638_w';
-      const map = new mapboxgl.Map({
-        container: 'map',
-// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-        style: 'mapbox://styles/mapbox/streets-v12',
-        center: [100.54890672971189, 13.742535638835866],
-        zoom: 15
-      });
-
-      // Create a default Marker and add it to the map.
-      const marker1 = new mapboxgl.Marker()
-              .setLngLat([100.54890672971189, 13.742535638835866])
-              .addTo(map);
-
-
-      // Add zoom and rotation controls to the map.
-      map.addControl(new mapboxgl.NavigationControl());
-    </script>
+    <img class="map" src="https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-l+38a7de(100.54890672971189,13.742535638835866)/100.5489,13.7425,16.5,0/512x400@2x?access_token=pk.eyJ1IjoianVoYW5udXNwdWtraSIsImEiOiJja2o5dTc4aWU1Yzd4MnpuNDc1ZjlwMnlyIn0.a-J_JJZ9eqS6gpDMqPXqCg" alt="Map of the city of Bangkok centered on the Phloen Chit station with a marker on the adjacent Mahatun Plaza building.">
     <p class="subtitle">Online courses are also available!</p>
   </div>
 </div>
