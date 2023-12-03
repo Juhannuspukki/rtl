@@ -21,41 +21,14 @@
          alt="">
     <h1>{{ .Title }} - {{ .Params.subtitle }}</h1>
     <div class="cta-container">
-      <a class="cta" href="/contact">Start today with a free lesson</a>
+      <a class="cta" href="/contact">{{ .Params.ctaText }}</a>
     </div>
   </header>
   <div class="reasons">
-    <h2>Why choose us for learning Thai?</h2>
-    <ul>
-      <li>
-        Highly trained, professional, qualified teachers. All our teachers are university educated and have many years of teaching experience.
-      </li>
-      <li>
-        Proven teaching method. You will be able to use the skills you learn immediately in everyday life.
-      </li>
-      <li>
-        Relaxed, friendly, informal environment. We have students from all over the world; you will make some great new friends!
-      </li>
-      <li>
-        Affordable courses. All our courses have a set price and a set amount of study hours.
-      </li>
-      <li>
-        Newly refurbished school. Fresh and clean with good facilities.
-      </li>
-      <li>
-        Small class sizes of from five to ten students.
-      </li>
-    </ul>
+    {{ .Params.textSection | markdownify }}
   </div>
   {{ partial "pricing" . }}
-  <div class="map-container">
-    <h2>
-      Convenient location
-    </h2>
-    <p class="subtitle">Our school is located in Mahatun Plaza, right next to Phloen Chit BTS station.</p>
-    <img class="map" src="https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-l+38a7de(100.54890672971189,13.742535638835866)/100.5489,13.7425,16.5,0/512x400@2x?access_token=pk.eyJ1IjoianVoYW5udXNwdWtraSIsImEiOiJja2o5dTc4aWU1Yzd4MnpuNDc1ZjlwMnlyIn0.a-J_JJZ9eqS6gpDMqPXqCg" alt="Map of the city of Bangkok centered on the Phloen Chit station with a marker on the adjacent Mahatun Plaza building.">
-    <p class="subtitle">Online courses are also available!</p>
-  </div>
+  {{ partial "map" . }}
 </div>
 
 {{ end }}

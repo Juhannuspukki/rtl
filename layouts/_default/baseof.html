@@ -13,6 +13,8 @@
   <meta name="description" content="Rak Thai Language School">
   <meta property="og:description" content="Rak Thai Language School is fun, friendly and affordable!">
 
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.banner) }}
 
   {{ with $imageResource }}
@@ -46,6 +48,18 @@
     {{ block "main" . }}{{end}}
   
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
 </body>
 
 </html>

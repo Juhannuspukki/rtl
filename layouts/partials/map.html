@@ -1,0 +1,15 @@
+{{ $headlessBundle := .Site.GetPage "/headless_data" }}
+{{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "map.md" ) }}
+
+{{ with $headlessData }}
+  <div class="map-container">
+    <h2>
+      {{ .Params.title }}
+    </h2>
+    {{ $mapResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.image) }}
+    {{ $resizedMap := $mapResource.Resize "1024x q90 webp"}}
+    <p class="subtitle">{{ .Params.subtitle  }}</p>
+    <img class="map" src="{{ $resizedMap.RelPermalink }}" alt="Map of the city of Bangkok centered on the Phloen Chit station with a marker on the adjacent Mahatun Plaza building.">
+    <p class="subtitle">{{ .Params.text }}</p>
+  </div>
+{{ end }}

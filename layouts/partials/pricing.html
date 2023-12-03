@@ -1,24 +1,25 @@
-<div class="cards">
-  <h2>
-    Pricing and timetable
-  </h2>
-  <p class="subtitle">All courses take about 1 month to complete and include a total of 60 hours of study.</p>
-  <div class="card-container">
-    <div class="card">
-      <h3>Morning courses</h3>
-      <p>9:00 - 12:00</p>
-      <p>7500 baht</p>
-    </div>
-    <div class="card">
-      <h3>Afternoon courses</h3>
-      <p>9:00 - 12:00</p>
-      <p>7500 baht</p>
-    </div>
-    <div class="card">
-      <h3>Evening courses</h3>
-      <p>16:00 - 18:00</p>
-      <p>8500 baht</p>
-    </div>
+{{ $headlessBundle := .Site.GetPage "/headless_data" }}
+{{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "prices.md" ) }}
+
+{{ with $headlessData }}
+  <div class="cards">
+    <h2>{{ .Params.title }}</h2>
+    <p class="subtitle">{{ .Params.subtitle }}</p>
+    {{ with .Params.prices }}
+      <div class="card-container">
+        {{ range . }}
+          <div class="card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .time }}</p>
+            <p>{{ .price }}</p>
+          </div>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p>No prices found.</p>
+    {{ end }}
+    <p class="subtitle">{{ .Params.text }}</p>
   </div>
-  <p class="subtitle">Enroll for 3 months or more and receive a 5% discount!</p>
-</div>
+  {{ else }}
+    <p>No data found.</p>
+{{ end }}
