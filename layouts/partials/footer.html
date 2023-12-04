@@ -1,40 +1,11 @@
+{{ $headlessBundle := .Site.GetPage "/headless_data" }}
+{{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "footer.md" ) }}
+
 <footer class="container">
-  <div class="footer-card">
-    <h3>Address</h3>
-    <p>
-      Rak Thai Language School
-      888/104 Mahatun Plaza, 10. Floor
-      Ploenchit Road, Lumpini, Patumwan
-      Bangkok 10330
-    </p>
-    <p>
-      Nearest BTS station: Phloen Chit (E2)
-    </p>
-    <a href="https://maps.app.goo.gl/gS6Z7XnaiLEMahDh8" rel=noreferrer target="_blank">
-      Click here for Google Maps
-    </a>
-  </div>
-  <div class="footer-card">
-    <h3>Opening hours</h3>
-    <p>
-      Every day, excluding weekends
-      and holidays
-    </p>
-    <p>
-      9:00 - 12:00<br/>
-      12:00 - 18:00
-    </p>
-  </div>
-  <div class="footer-card">
-    <h3>Contact us</h3>
-    <p>
-      Whatsapp: +66 02-255-3036
-    </p>
-    <p>
-      Line: @rtlschool
-    </p>
-    <p>
-      Email: hello@rtl.school
-    </p>
-  </div>
+  {{ range $headlessData.Params.segments }}
+    <div class="footer-card">
+      <h3>{{ .title }}</h3>
+      {{ .content | markdownify }}
+    </div>
+  {{ end }}
 </footer>
