@@ -36,3 +36,27 @@ collections:
                 { label: "Description", name: description, widget: "markdown" },
               ] }
             ] }
+  - label: "Partials"
+    name: "partials"
+    files:
+      - label: "Map"
+        name: "map"
+        file: "content/headless_data/map.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Subtitle", name: subtitle, widget: "string" }
+          - { label: "Map image", name: image, widget: "image" }
+          - { label: "Map alt text", name: alt, widget: "string" }
+          - { label: "Text content", name: text, widget: "markdown" }
+      - label: "Prices"
+        name: "prices"
+        file: "content/headless_data/prices.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Subtitle", name: subtitle, widget: "string" }
+          - { label: "Prices", name: prices, widget: list, fields: [
+              { label: "Title", name: title, widget: "string" },
+              { label: "Time", name: time, widget: "string" },
+              { label: "Price", name: price, widget: "string" },
+            ] }
+          - { label: "Text content", name: text, widget: "markdown" }
