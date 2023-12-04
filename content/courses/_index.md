@@ -61,9 +61,6 @@ categories:
           famous Chatuchuk weekend market in detail. Students will also learn
           formal conversational skills, which are used in everyday life, in the
           news and on TV or in more formal setting.
-    categories:
-      - title: Test
-        description: Test 2
   - title: Reading and writing
     courses:
       - title: Reading level 1

@@ -31,7 +31,7 @@ collections:
           - { label: "Course section title", name: categoryTitle, widget: "string" }
           - { label: "Course categories", name: categories, widget: list, fields: [
               { label: "Title", name: title, widget: "string" },
-              { label: "Course categories", name: categories, widget: list, fields: [
+              { label: "Course categories", name: courses, widget: list, fields: [
                 { label: "Title", name: title, widget: "string" },
                 { label: "Description", name: description, widget: "markdown" },
               ] }
