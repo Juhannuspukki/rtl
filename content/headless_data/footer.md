@@ -2,22 +2,19 @@
 segments:
   - title: Address
     content: >-
-      Rak Thai Language School
+      Rak Thai Language School  
+  
+      Mahatun Plaza, 10. floor  
 
+      888/104 Ploenchit Road    
 
-      888/104 Mahatun Plaza, 10. Floor
+      Lumpini, Patumwan  
 
-
-      Ploenchit Road, Lumpini, Patumwan
-
-
-      Bangkok 10330
-
+      10330 Bangkok
 
 
 
       Nearest BTS station: 
-
 
       Phloen Chit (E2)
 
@@ -31,16 +28,13 @@ segments:
 
       Morning: 9:00 - 12:00
       Afternoon: 12:00 - 18:00
-  - title: Opening hours
+  - title: Contact
     content: |-
       [Whatsapp: +66 61-978-5962](https://wa.me/66619785962)
 
-      [](https://wa.me/66619785962)
       [Facebook page](https://www.facebook.com/rtlschool/)
 
+      [LINE: @rtlschool](https://line.me/ti/p/r2YsExlNUi)
 
-      [Line: @rtlschool](https://line.me/ti/p/r2YsExlNUi)
-
-
-      Email: hello@rtl.school
+      Email: office@rtl-school.com
 ---
