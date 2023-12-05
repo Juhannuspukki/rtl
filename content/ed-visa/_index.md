@@ -2,9 +2,9 @@
 menu: main
 weight: 2
 title: ED Visa
-subtitle: Stay in Thailand up to 14 months!
+subtitle: Stay in Thailand for up to 14 months!
 textContent: At RTL Scool, you can get a Non-immigrant Education visa, allowing you to stay in Thailand while studying the Thai language. Contact us to find out more, we will help with any paperwork!
-durationTitle: 
+durationTitle: ED Visa and extensions
 durationCards:
     - title: Basic studies
       subtitle: 3 months

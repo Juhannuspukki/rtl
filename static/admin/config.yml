@@ -36,6 +36,21 @@ collections:
                 { label: "Description", name: description, widget: "markdown" },
               ] }
             ] }
+      - label: "ED Visa"
+        name: "ed-visa"
+        file: "content/ed-visa/_index.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string" }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string" }
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Subtitle", name: subtitle, widget: "string" }
+          - { label: "Text content", name: textContent, widget: "markdown" }
+          - { label: "Visa duration section title", name: durationTitle, widget: "string" }
+          - { label: "Visa information", name: durationCards, widget: list, fields: [
+              { label: "Title", name: title, widget: "string" },
+              { label: "Subtitle", name: subtitle, widget: "string" },
+              { label: "Description", name: description, widget: "markdown" },
+            ] }
   - label: "Partials"
     name: "partials"
     files:
@@ -68,3 +83,4 @@ collections:
               { label: "Title", name: title, widget: "string" },
               { label: "Content", name: content, widget: "markdown" },
             ] }
+
