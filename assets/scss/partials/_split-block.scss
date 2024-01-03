@@ -1,0 +1,26 @@
+.split-block {
+  .split-block-container {
+    &:after
+    {
+      content: ".";
+      display:block;
+      height:0;
+      clear:both;
+      visibility:hidden;
+    }
+    .split-block-banner {
+      float: right;
+      margin: 0 0 1rem 1rem;
+      max-width: 25rem;
+      border-radius: 1rem;
+      @media only screen and (max-width: 640px) {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+      }
+    }
+    margin-bottom: 4rem;
+  }
+}

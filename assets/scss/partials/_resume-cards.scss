@@ -1,0 +1,48 @@
+.khruu-experience {
+  .khruu-experience-card {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    margin-bottom: 2rem;
+    img {
+      display: block;
+      width: 100%;
+    }
+    .khruu-experience-text {
+      margin-left: 2rem;
+      h4 {
+        font-family: $header-font;
+        color: $light-color;
+        margin: 0 0 0.5rem 0;
+      }
+      .name {
+        font-family: $header-font;
+        color: $light-color;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+      }
+      .degree {
+        color: $light-color;
+        margin: 0 0 1rem 0;
+      }
+      .experience {
+        color: $light-color;
+        margin: 0 0 1rem 0;
+      }
+    }
+    @media only screen and (max-width: 512px) {
+      grid-template-columns: 1fr;
+      img {
+        display: block;
+        max-width: 10rem;
+        margin: 0 auto 1rem;
+      }
+      .name, h4, p {
+        text-align: center;
+      }
+      .khruu-experience-text {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -59,15 +59,7 @@ figure {
     font-style: italic;
     text-align: center;
     font-family: $bread-font;
-    color: #fff;
-  }
-  &:hover {
-    transform: scale(1.02, 1.02);
-    img {
-    }
-    figcaption {
-      color: #E87800;
-    }
+    color: $dark-color;
   }
 }
 

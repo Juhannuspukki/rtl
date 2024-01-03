@@ -1,51 +1,42 @@
 {{ define "main" }}
 
     <header>
-        <h1>Contact us</h1>
+        <h1>{{ .Title }}</h1>
     </header>
 
     <main>
         <div class="contact-grid">
             <div class="contact-card">
-                <h2>Contact details</h2>
-                <p>Tel: 02-255-3036 , 061-978-5962, 089-520-5391, 083-823-4863<br/>
-                    Email: hello@rtl.school<br/>
-                    LINE: @rtlschool<br/>
-                </p>
-                <p>
-                    You can also contact us via WhatsApp!
-                </p>
+                <h2>{{ .Params.contactSquareTitle}}</h2>
+                {{ .Params.contactSquareDetails | markdownify }}
+                {{ partial "social-media-buttons" . }}
             </div>
             <div class="contact-card">
-                <h2>Address</h2>
-                <p>Rak Thai Language School<br/>
-                    888/104 Mahatun Plaza, 10. Floor
-                    Ploenchit Road, Lumpini, Patumwan
-                    Bangkok 10330
-                </p>
-                <p>
-                    Nearest BTS station: Phloen Chit (E2)
-                </p>
-                <p>
-                    <a href="https://maps.app.goo.gl/gS6Z7XnaiLEMahDh8" rel=noreferrer target="_blank">
-                        Click here for Google Maps
-                    </a>
-                </p>
+                <h2>{{ .Params.addressSquareTitle}}</h2>
+                {{ .Params.addressSquareDetails | markdownify }}
             </div>
             <div class="contact-card">
-                <h2>Send a message</h2>
+                <h2>{{ .Params.formSquareTitle }}</h2>
                 <form>
                     <label for="email-input">Email</label>
-                    <input type="email" placeholder="your.email@domain.com" id="email-input">
+                    <input type="email" placeholder="your.email@domain.com" id="email-input" disabled>
                     <label for="message-input">Message</label>
-                    <textarea placeholder="Hello! I would like to know more about..." id="message-input">
+                    <textarea placeholder="Hello! I would like to know more about..." id="message-input" disabled>
                     </textarea>
-                    <button type="submit">Submit</button>
+                    <button type="submit" disabled>Submit</button>
                 </form>
             </div>
             <div class="contact-card">
-                <h2>Map</h2>
-                <img class="map" src="https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-l+38a7de(100.54890672971189,13.742535638835866)/100.5489,13.7425,17,0/400x400@2x?access_token=pk.eyJ1IjoianVoYW5udXNwdWtraSIsImEiOiJja2o5dTc4aWU1Yzd4MnpuNDc1ZjlwMnlyIn0.a-J_JJZ9eqS6gpDMqPXqCg" alt="Map of the city of Bangkok centered on the Phloen Chit station with a marker on the adjacent Mahatun Plaza building.">
+                <h2>{{ .Params.mapSquareTitle }}</h2>
+                {{ $mapResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.map) }}
+                {{ $resizedMap := $mapResource.Resize "800x q90 webp"}}
+                <a href="{{ .Params.mapLink }}" target="_blank" rel="noopener noreferrer">
+                    <img
+                        class="map"
+                        src="{{ $resizedMap.Permalink }}"
+                        alt="{{ .Params.mapAltText }}"
+                    >
+                </a>
             </div>
         </div>
     </main>

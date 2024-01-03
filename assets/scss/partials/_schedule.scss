@@ -1,0 +1,16 @@
+.schedule {
+  display: flex;
+  justify-content: center;
+  .schedule-image {
+    margin: 0 1rem;
+    img {
+      display: block;
+      max-height: 30rem;
+      max-width: calc(100% - 1rem);
+      margin: auto;
+    }
+  }
+  @media only screen and (max-width: 712px) {
+    display: block;
+  }
+}

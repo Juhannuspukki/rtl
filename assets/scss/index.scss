@@ -7,6 +7,11 @@
 @import "courses";
 @import "ed-visa";
 @import "about-us";
+@import "partials/resume-cards";
+@import "partials/text-block";
+@import "partials/split-block";
+@import "partials/schedule";
+@import "partials/social-media-buttons";
 
 .container {
   max-width: 900px;
@@ -17,6 +22,12 @@
       max-width: 100%;
     }
   }
+}
+
+.narrow-container {
+  max-width: 512px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
 .cta-container {

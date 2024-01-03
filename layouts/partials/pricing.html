@@ -1,25 +1,27 @@
 {{ $headlessBundle := .Site.GetPage "/headless_data" }}
 {{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "prices.md" ) }}
 
-{{ with $headlessData }}
-  <div class="cards">
-    <h2>{{ .Params.title }}</h2>
-    <p class="subtitle">{{ .Params.subtitle }}</p>
-    {{ with .Params.prices }}
-      <div class="card-container">
-        {{ range . }}
-          <div class="card">
-            <h3>{{ .title }}</h3>
-            <p>{{ .time }}</p>
-            <p>{{ .price }}</p>
-          </div>
-        {{ end }}
-      </div>
+<section class="container">
+  {{ with $headlessData }}
+    <div class="cards">
+      <h2>{{ .Params.title }}</h2>
+      <p class="subtitle">{{ .Params.subtitle }}</p>
+      {{ with .Params.prices }}
+        <div class="card-container">
+          {{ range . }}
+            <div class="card">
+              <h3>{{ .title }}</h3>
+              <p>{{ .time }}</p>
+              <p>{{ .price }}</p>
+            </div>
+          {{ end }}
+        </div>
+      {{ else }}
+        <p>No prices found.</p>
+      {{ end }}
+      <p class="subtitle">{{ .Params.text }}</p>
+    </div>
     {{ else }}
-      <p>No prices found.</p>
-    {{ end }}
-    <p class="subtitle">{{ .Params.text }}</p>
-  </div>
-  {{ else }}
-    <p>No data found.</p>
-{{ end }}
+      <p>No data found.</p>
+  {{ end }}
+</section>

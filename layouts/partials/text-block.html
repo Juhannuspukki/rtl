@@ -1,0 +1,24 @@
+<section class="text-block narrow-container">
+    {{ range .Params.textContent }}
+        {{ .text | markdownify }}
+
+        {{ if .media }}
+            {{ $mediaResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .media ) }}
+            {{ if eq (substr .media -3) "mp4" }}
+                <figure>
+                    <video muted playsinline loop autoplay src="{{ $mediaResource.RelPermalink }}" class="text-block-image"></video>
+                    <figcaption>{{ .mediaCaption }}</figcaption>
+                </figure>
+            {{ else }}
+                {{ $resizedMediaResource := $mediaResource.Resize "x320 q90 webp"}}
+                    <figure>
+                        <img class="text-block-image"
+                             src="{{ $resizedMediaResource.RelPermalink }}"
+                             aria-hidden="true"
+                             alt="">
+                        <figcaption>{{ .mediaCaption }}</figcaption>
+                    </figure>
+            {{end }}
+        {{ end }}
+    {{end}}
+</section>

@@ -6,7 +6,7 @@
     max-width: 900px;
     margin: auto;
     .logo {
-      img {
+      svg {
         height: 4rem;
         padding: 1rem;
       }
@@ -47,6 +47,32 @@
           &:first-of-type {
             border-top: 1px solid #FFFFFF;
           }
+          .nested-menu {
+            display: none;
+          }
+          &:hover {
+            .nested-menu {
+              z-index: 1000;
+              position: absolute;
+              display: block;
+              padding: 0;
+              background-color: $background-color;
+              border-radius: 0 0 1rem 1rem;
+              box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.2);
+              li {
+                display: flex;
+                a {
+                  font-size: 1rem;
+                  flex-grow: 1;
+                }
+                &:last-of-type {
+                  a {
+                    border-radius: 0 0 1rem 1rem;
+                  }
+                }
+              }
+            }
+          }
         }
         a, p {
           padding: 1.15rem 2rem;
@@ -57,7 +83,8 @@
           text-transform: uppercase;
           color: $cheery-color;
           &.active {
-            text-decoration: underline;
+            color: $background-color;
+            background-color: $cheery-color;
           }
           &:hover {
             opacity: 0.7;

@@ -2,23 +2,14 @@
 
     <header>
         <div class="container">
-            <h1>About us</h1>
+            <h1>{{ .Title }}</h1>
         </div>
     </header>
 
     <main class="container">
-        <h2>Meet our teachers (khruu)</h2>
-        <p class="ingress">Rak Thai Language school was founded in 2012. All our teachers, or <i>khruu</i> are highly trained, highly professional and have many years teaching of experience. We are ready to teach you Thai!</p>
-        <div class="khruu-cards">
-            {{ range .Params.khruu }}
-                {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .portrait) }}
-                {{ $resizedPortrait := $imageResource.Resize "x320 q90 webp"}}
-                <div class="khruu-card">
-                    <img src="{{ $resizedPortrait.RelPermalink }}" alt="">
-                    <p>{{ .name }}</p>
-                </div>
-            {{end}}
-        </div>
+        <h2>{{ .Params.subtitle }}</h2>
+        <p class="ingress">All our teachers, or <i>khruu</i> are highly trained, highly professional and have many years teaching of experience. We are ready to teach you Thai!</p>
+        {{ partial "teachers" . }}
     </main>
 
 {{ end }}

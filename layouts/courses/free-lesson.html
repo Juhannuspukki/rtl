@@ -1,0 +1,12 @@
+{{ define "main" }}
+    <header>
+        <div class="container">
+            <h1>{{ .Title }}</h1>
+            <h2>{{ .Params.subtitle }}</h2>
+        </div>
+    </header>
+    <main>
+        {{ partial "text-block" . }}
+    </main>
+
+{{ end }}

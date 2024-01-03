@@ -1,0 +1,21 @@
+<section class="narrow-container">
+  {{ with .Params.khruuTitle }}
+    <h2>{{ . }}</h2>
+  {{ end }}
+  <div class="khruu-experience">
+    {{ range .Params.khruu }}
+      {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .portrait) }}
+      {{ $resizedPortrait := $imageResource.Resize "x320 q90 webp"}}
+      <div class="khruu-experience-card">
+        <img src="{{ $resizedPortrait.RelPermalink }}" alt="">
+        <div class="khruu-experience-text">
+            <h3 class="name">{{ .name }}</h3>
+            <h4>Education</h4>
+            <p class="degree">{{ with .degree }}{{ . }}{{ end }}</p>
+            <h4>Experience in teaching Thai</h4>
+            <p class="experience">{{ with .experience }}{{ . }}{{ end }}</p>
+        </div>
+      </div>
+    {{end}}
+  </div>
+</section>
