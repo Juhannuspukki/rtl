@@ -8,12 +8,12 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Front page"
+      - label: "Home page"
         name: "index"
         file: "content/_index.md"
         fields: # The fields for each document, usually in front matter
-          - { label: "Meta title (SEO)", name: metaTitle, widget: "string" }
-          - { label: "Meta description (SEO)", name: metaDescription, widget: "string" }
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
           - { label: "Title", name: title, widget: "string" }
           - { label: "Subtitle", name: subtitle, widget: "string" }
           - { label: "Banner", name: banner, widget: "image" }
@@ -23,34 +23,102 @@ collections:
         name: "courses"
         file: "content/courses/_index.md"
         fields: # The fields for each document, usually in front matter
-          - { label: "Meta title (SEO)", name: metaTitle, widget: "string" }
-          - { label: "Meta description (SEO)", name: metaDescription, widget: "string" }
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
           - { label: "Title", name: title, widget: "string" }
           - { label: "Banner", name: banner, widget: "image" }
           - { label: "Text section", name: textSection, widget: "markdown" }
           - { label: "Course section title", name: categoryTitle, widget: "string" }
-          - { label: "Course categories", name: categories, widget: list, fields: [
-              { label: "Title", name: title, widget: "string" },
-              { label: "Courses", name: courses, widget: list, fields: [
-                { label: "Title", name: title, widget: "string" },
-                { label: "Description", name: description, widget: "markdown" },
-              ] }
+      - label: "Free lesson"
+        name: "free-lesson"
+        file: "content/free-lesson/_index.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Subtitle", name: subtitle, widget: "string" }
+          - { label: "Text blocks", name: textContent, widget: list, fields: [
+              { label: "Text", name: text, widget: "markdown" },
+              { label: "Media", name: media, widget: "file", required: false },
+              { label: "Media caption", name: mediaCaption, widget: "string", required: false },
+            ] }
+      - label: "Schedule"
+        name: "schedule"
+        file: "content/schedule/_index.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
+          - { label: "Title", name: title, widget: "string" }
+      - label: "Study online"
+        name: "study-online"
+        file: "content/study-online/_index.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Subtitle", name: subtitle, widget: "string" }
+          - { label: "Banner", name: banner, widget: "image" }
+          - { label: "Text section", name: textSection, widget: "markdown" }
+      - label: "Private lessons"
+        name: "private-lessons"
+        file: "content/private-lessons/_index.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Banner", name: banner, widget: "image" }
+          - { label: "Text section", name: textSection, widget: "markdown" }
+          - { label: "Teacher section title", name: khruuTitle, widget: "string" }
+          - { label: "Teachers", name: khruu, widget: list, fields: [
+              { label: "Name", name: name, widget: "string" },
+              { label: "Portrait", name: portrait, widget: "image" },
+              { label: "Education", name: degree, widget: "string" },
+              { label: "Experience", name: experience, widget: "string" },
             ] }
       - label: "ED Visa"
         name: "ed-visa"
         file: "content/ed-visa/_index.md"
         fields: # The fields for each document, usually in front matter
-          - { label: "Meta title (SEO)", name: metaTitle, widget: "string" }
-          - { label: "Meta description (SEO)", name: metaDescription, widget: "string" }
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
           - { label: "Title", name: title, widget: "string" }
           - { label: "Subtitle", name: subtitle, widget: "string" }
           - { label: "Text content", name: textContent, widget: "markdown" }
           - { label: "Visa duration section title", name: durationTitle, widget: "string" }
-          - { label: "Visa information", name: durationCards, widget: list, fields: [
+          - { label: "Visa information cards", name: durationCards, widget: list, fields: [
               { label: "Title", name: title, widget: "string" },
               { label: "Subtitle", name: subtitle, widget: "string" },
               { label: "Description", name: description, widget: "markdown" },
             ] }
+      - label: "Teachers"
+        name: "about-us"
+        file: "content/about-us/_index.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Subtitle", name: subtitle, widget: "string" }
+          - { label: "Text content", name: textSection, widget: "markdown" }
+          - { label: "Teachers", name: khruu, widget: list, fields: [
+              { label: "Name", name: name, widget: "string" },
+              { label: "Portrait", name: portrait, widget: "image" },
+            ] }
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact/_index.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Contact section title", name: contactSquareTitle, widget: "string" }
+          - { label: "Contact section content", name: contactSquareDetails, widget: "markdown" }
+          - { label: "Address section title", name: addressSquareTitle, widget: "string" }
+          - { label: "Address section content", name: addressSquareDetails, widget: "markdown" }
+          - { label: "Form section title", name: formSquareTitle, widget: "string" }
+          - { label: "Map section title", name: mapSquareTitle, widget: "string" }
+          - { label: "Map", name: map, widget: "image" }
+          - { label: "Map link", name: mapLink, widget: "string" }
+          - { label: "Map alt text", name: mapAltText, widget: "string" }
   - label: "Partials"
     name: "partials"
     files:
@@ -61,6 +129,7 @@ collections:
           - { label: "Title", name: title, widget: "string" }
           - { label: "Subtitle", name: subtitle, widget: "string" }
           - { label: "Map image", name: image, widget: "image" }
+          - { label: "Link", name: link, widget: "string" }
           - { label: "Map alt text", name: alt, widget: "string" }
           - { label: "Text content", name: text, widget: "markdown" }
       - label: "Prices"
@@ -83,4 +152,34 @@ collections:
               { label: "Title", name: title, widget: "string" },
               { label: "Content", name: content, widget: "markdown" },
             ] }
+      - label: "Course information"
+        name: "courses"
+        file: "content/headless_data/courses.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Main title", name: categoryTitle, widget: "string" }
+          - { label: "Course categories", name: categories, widget: list, fields: [
+              { label: "Category title", name: title, widget: "string" },
+              { label: "Courses", name: courses, widget: list, fields: [
+                { label: "Title", name: title, widget: "string" },
+                { label: "Description", name: description, widget: "markdown" },
+              ] }
+            ] }
+      - label: "Schedule"
+        name: "schedule"
+        file: "content/headless_data/schedule.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Title for current year", name: currentYear, widget: "string" }
+          - { label: "Schedule for current year", name: currentYearSchedule, widget: "image" }
+          - { label: "Title for next year", name: nextYear, widget: "string" }
+          - { label: "Schedule for next year", name: nextYearSchedule, widget: "image" }
+      - label: "Social media buttons"
+        name: "social-media"
+        file: "content/headless_data/social-media.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Buttons", name: buttons, widget: list, fields: [
+              { label: "Icon", name: icon, widget: "image" },
+              { label: "Alt text", name: alt, widget: "string" },
+              { label: "Link", name: link, widget: "string" },
+            ] }
+
 
