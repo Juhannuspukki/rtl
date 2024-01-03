@@ -31,7 +31,7 @@ collections:
           - { label: "Course section title", name: categoryTitle, widget: "string" }
       - label: "Free lesson"
         name: "free-lesson"
-        file: "content/free-lesson/_index.md"
+        file: "content/courses/free-lesson/_index.md"
         fields: # The fields for each document, usually in front matter
           - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
           - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
@@ -44,14 +44,14 @@ collections:
             ] }
       - label: "Schedule"
         name: "schedule"
-        file: "content/schedule/_index.md"
+        file: "content/courses/schedule/_index.md"
         fields: # The fields for each document, usually in front matter
           - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
           - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
           - { label: "Title", name: title, widget: "string" }
       - label: "Study online"
         name: "study-online"
-        file: "content/study-online/_index.md"
+        file: "content/courses/study-online/_index.md"
         fields: # The fields for each document, usually in front matter
           - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
           - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
@@ -61,7 +61,7 @@ collections:
           - { label: "Text section", name: textSection, widget: "markdown" }
       - label: "Private lessons"
         name: "private-lessons"
-        file: "content/private-lessons/_index.md"
+        file: "content/courses/private-lessons/_index.md"
         fields: # The fields for each document, usually in front matter
           - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
           - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
