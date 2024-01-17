@@ -5,7 +5,7 @@ metaDescription: Rak Thai Language School is fun, friendly and affordable! We
   online students worldwide.
 title: Learn Thai language in Bangkok
 subtitle: Rak Thai Language School is fun, friendly and affordable!
-banner: khruus.jpg
+banner: /uploads/rtlprofile-341-.jpg
 ctaText: Start today with a free lesson
 textSection: >-
   ## Why choose us for learning Thai? 
