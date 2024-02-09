@@ -21,8 +21,13 @@
     img {
       max-width: 100%;
     }
+    .hero {
+      margin: 0 -1rem;
+      max-width: calc(100% + 2rem)
+    }
   }
 }
+
 
 .narrow-container {
   max-width: 512px;
@@ -42,6 +47,9 @@
     font-family: $header-font;
     font-weight: 700;
     font-size: calc(0.8rem + 1.6vw);
+    @media only screen and (min-width: 712px) {
+      font-size: 1.6rem;
+    }
     border: 0.25rem solid $cheery-color;
     border-radius: 1rem;
     padding: 1rem 1.5rem;
