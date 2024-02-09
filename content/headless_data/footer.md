@@ -26,7 +26,7 @@ segments:
       Our office is open every day, excluding weekends and holidays
 
 
-      Morning: 9:00 - 12:00
+      Morning: 9:00 - 12:00  
       Afternoon: 12:00 - 18:00
   - title: Contact
     content: |-

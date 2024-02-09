@@ -1,11 +1,13 @@
 {{ $headlessBundle := .Site.GetPage "/headless_data" }}
 {{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "footer.md" ) }}
 
-<footer class="container">
-  {{ range $headlessData.Params.segments }}
-    <div class="footer-card">
-      <h3>{{ .title }}</h3>
-      {{ .content | markdownify }}
-    </div>
-  {{ end }}
+<footer>
+  <div class="container">
+    {{ range $headlessData.Params.segments }}
+      <div class="footer-card">
+        <h3>{{ .title }}</h3>
+        {{ .content | markdownify }}
+      </div>
+    {{ end }}
+  </div>
 </footer>

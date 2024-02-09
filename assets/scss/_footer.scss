@@ -1,31 +1,32 @@
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   border-top: 0.25rem solid $cheery-color;
-  .footer-card {
-    margin: 0 2rem 4rem;
-    h3 {
-      margin-top: 2rem;
-      text-align: left;
-    }
-    p {
-      text-align: left;
-      margin: 1rem 0;
-      color: $light-color;
-      font-weight: 700;
-    }
-    a {
-      text-align: left;
-      margin: 1rem 0;
-      color: $light-color;
-      font-weight: 700;
-      text-decoration: underline;
-      &:hover {
-        color: $cheery-color;
+  margin-bottom: 2rem;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .footer-card {
+      margin: 0 2rem 1rem;
+      h3 {
+        margin-top: 2rem;
+        text-align: left;
+      }
+      p {
+        text-align: left;
+        margin: 1rem 0;
+        color: $light-color;
+      }
+      a {
+        text-align: left;
+        margin: 1rem 0;
+        color: $light-color;
+        text-decoration: underline;
+        &:hover {
+          color: $cheery-color;
+        }
       }
     }
-  }
-  @media only screen and (max-width: 712px) {
-    grid-template-columns: 1fr;
+    @media only screen and (max-width: 712px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
