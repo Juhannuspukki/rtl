@@ -3,7 +3,7 @@ menu:
     main:
         name: Study online
         weight: 3
-        parent: Courses ↓
+        parent: Courses
 type: courses
 layout: study-online
 banner: rakthaionline-2.jpg

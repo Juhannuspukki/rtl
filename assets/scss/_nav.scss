@@ -82,6 +82,9 @@
           }
           .menu-title {
             flex-grow: 1;
+            svg {
+              display: none;
+            }
           }
           .menu-subtitle {
             font-size: 1rem;
@@ -165,6 +168,21 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              .menu-title {
+                svg {
+                  display: inline;
+                  width: 1rem;
+                  padding-left: 0.25rem;
+                  path {
+                    fill: $cheery-color;
+                  }
+                  &.highlighted {
+                    path {
+                      fill: $background-color;
+                    }
+                  }
+                }
+              }
             }
           }
           .menu-item {

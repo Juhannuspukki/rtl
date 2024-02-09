@@ -3,7 +3,7 @@ menu:
   main:
     name: Free Lesson - Start Here
     weight: 1
-    parent: Courses ↓
+    parent: Courses
 type: courses
 layout: free-lesson
 metaTitle: Are you looking to learn reading, speaking or writing? We have it all!

@@ -13,8 +13,10 @@
     {{ $page := .page }}
     {{ range .menuEntries }}
         {{ $attrs := dict "href" .URL }}
+        {{ $caretclass := "" }}
         {{ if $page.IsMenuCurrent .Menu . }}
             {{ $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+            {{ $caretclass = "highlighted" }}
         {{ else if $page.HasMenuCurrent .Menu .}}
             {{ $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
         {{ end }}
@@ -34,6 +36,15 @@
             >
             <span class="menu-title">
                 {{ $name }}
+
+                {{- with .Children }}
+                    <svg  class="{{ $caretclass }}" viewBox="0 0 18 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                        <g transform="matrix(0.0307743,0,0,0.0307743,-3.46267,-8.07882)">
+                            <path d="M400,587.5C390.056,587.513 380.506,583.558 373.483,576.517L123.483,326.517C116.465,319.488 112.518,309.951 112.518,300.019C112.518,279.447 129.447,262.518 150.019,262.518C159.951,262.518 169.488,266.465 176.517,273.483L400,496.967L623.483,273.483C630.512,266.465 640.049,262.518 649.981,262.518C670.553,262.518 687.482,279.447 687.482,300.019C687.482,309.951 683.535,319.488 676.517,326.517L426.517,576.517C419.494,583.558 409.944,587.513 400,587.5Z" style="fill-rule:nonzero;"/>
+                        </g>
+                    </svg>
+                {{ end }}
+
             </span>
 
             </a>

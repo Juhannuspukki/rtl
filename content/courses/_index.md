@@ -22,6 +22,6 @@ textSection: >-
   Classes are taught in an informal, relaxed and fun environment, where all the students are encouraged to participate in all areas of Thai language and practice continuously. Students learn materials that are practical and relevant and can be used straight away in any situation.
 menu:
   main:
-    name: Courses ↓
+    name: Courses
     weight: 2
 ---
