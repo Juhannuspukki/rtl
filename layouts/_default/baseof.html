@@ -42,10 +42,6 @@
   {{ $style := resources.Get "scss/index.scss" | resources.ToCSS }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
-  {{ if eq .RelPermalink "/"}}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  {{ end }}
-
 </head>
 
 <body>
@@ -55,17 +51,6 @@
   
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
 
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
 </body>
 
 </html>
