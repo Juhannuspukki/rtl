@@ -33,7 +33,7 @@ khruu:
     degree: Bachelor of Education Program in English
     experience: 22 years. 10 years at UTL School and 12 years at RTL School
   - name: Miss Wanphen Yangwanna
-    portrait: /uploads/rtlprofile-217-.jpg
+    portrait: /uploads/wanphen2.jpg
     degree: Bachelor of Education Program in Thai Language
     experience: 21 years. 9 years at UTL School and 12 years at RTL School
   - name: Miss Supaporn Songmuang
