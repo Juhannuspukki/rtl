@@ -17,13 +17,16 @@
             </div>
             <div class="contact-card">
                 <h2>{{ .Params.formSquareTitle }}</h2>
-                <form>
+                <form
+                    action="https://formspree.io/f/xyyreaoq"
+                    method="POST"
+                >
                     <label for="email-input">Email</label>
-                    <input type="email" placeholder="your.email@domain.com" id="email-input" disabled>
+                    <input type="email" placeholder="your.email@domain.com" id="email-input">
                     <label for="message-input">Message</label>
-                    <textarea placeholder="Hello! I would like to know more about..." id="message-input" disabled>
+                    <textarea placeholder="Hello! I would like to know more about..." id="message-input">
                     </textarea>
-                    <button type="submit" disabled>Submit</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
             <div class="contact-card">
