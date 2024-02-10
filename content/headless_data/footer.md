@@ -27,7 +27,7 @@ segments:
 
 
       Morning: 9:00 - 12:00  
-      Afternoon: 12:00 - 18:00
+      Afternoon: 13:00 - 18:00
   - title: Contact
     content: |-
       [Whatsapp: +66 61-978-5962](https://wa.me/66619785962)
