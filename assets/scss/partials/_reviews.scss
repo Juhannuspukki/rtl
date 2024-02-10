@@ -1,0 +1,33 @@
+.reviews {
+  margin-bottom: 4rem;
+  .review-icon-container {
+    position: relative;
+    display: block;
+    svg {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15rem;
+    }
+    .grade {
+      position: absolute;
+      left: calc(50% - 1.6rem);
+      top: -0.5rem;
+      width: 9rem;
+      text-align: center;
+      font-weight: 700;
+      margin: 0;
+      color: $dark-color;
+    }
+    .review-count {
+      position: absolute;
+      font-weight: 700;
+      top: 3.25rem;
+      left: calc(50% - 1.6rem);
+      width: 9rem;
+      text-align: center;
+      color: $light-color;
+      margin: 0;
+    }
+  }
+}

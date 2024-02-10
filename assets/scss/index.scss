@@ -12,6 +12,7 @@
 @import "partials/split-block";
 @import "partials/schedule";
 @import "partials/social-media-buttons";
+@import "partials/reviews";
 
 .container {
   max-width: 900px;
@@ -28,7 +29,6 @@
     }
   }
 }
-
 
 .narrow-container {
   max-width: 512px;
