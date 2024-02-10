@@ -26,9 +26,7 @@
       <a class="cta" href="/courses/free-lesson">{{ .Params.ctaText }}</a>
     </div>
   </header>
-  <div class="reasons">
-    {{ .Params.textSection | markdownify }}
-  </div>
+  {{ partial "icongrid" . }}
   {{ partial "pricing" . }}
   {{ partial "map" . }}
 </div>

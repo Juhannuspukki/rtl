@@ -1,0 +1,16 @@
+<section>
+    <h2>{{ .Params.iconGridTitle }}</h2>
+    <div class="icon-grid">
+        {{ range .Params.iconGridElements }}
+            {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .image) }}
+            <div class="icon-card">
+                <div class="icon-container">
+                    <img src="{{ $imageResource.RelPermalink }}" alt="">
+                </div>
+                <p>
+                    {{ .text }}
+                </p>
+            </div>
+        {{end}}
+    </div>
+</section>
