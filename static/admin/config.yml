@@ -185,5 +185,13 @@ collections:
               { label: "Alt text", name: alt, widget: "string" },
               { label: "Link", name: link, widget: "string" },
             ] }
+      - label: "Google reviews"
+        name: "reviews"
+        file: "content/headless_data/reviews.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Link to reviews", name: link, widget: "string" }
+          - { label: "Grade", name: grade, widget: "string" }
+          - { label: "Review count", name: count, widget: "string" }
 
 
