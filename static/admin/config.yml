@@ -18,7 +18,11 @@ collections:
           - { label: "Subtitle", name: subtitle, widget: "string" }
           - { label: "Banner", name: banner, widget: "image" }
           - { label: "Button text", name: ctaText, widget: "string" }
-          - { label: "Text section", name: textSection, widget: "markdown" }
+          - { label: "Icon grid title", name: iconGridTitle, widget: "string" }
+          - { label: "Icons", name: icon, widget: list, fields: [
+              { label: "Icon", name: image, widget: "image" },
+              { label: "Description", name: text, widget: "string", required: false },
+            ] }
       - label: "Courses"
         name: "courses"
         file: "content/courses/_index.md"
