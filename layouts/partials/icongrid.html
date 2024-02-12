@@ -1,5 +1,5 @@
 <section>
-    <h2>{{ .Params.iconGridTitle }}</h2>
+    <h2 class="icon-grid-title">{{ .Params.iconGridTitle }}</h2>
     <div class="icon-grid">
         {{ range .Params.iconGridElements }}
             {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .image) }}
