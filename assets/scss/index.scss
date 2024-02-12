@@ -149,3 +149,10 @@
     object-fit: cover;
   }
 }
+
+.notfound-container {
+  min-height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
