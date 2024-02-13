@@ -44,6 +44,40 @@ khruu:
     portrait: /uploads/rtlprofile-238-.jpg
     degree: Bachelor of Education Program in Thai Language
     experience: 17 years. 5 years at UTL and 12 years at RTL School
+  - name: "Miss Patchara Boonyuen  "
+    portrait: /uploads/rtlprofile-94-.jpg
+    degree: Bachelor of Science Program in Biology
+    experience: " Teach Thai to foreigners at RTL School and I used to teach at a
+      government school ; Wettawanwittaya school"
+  - name: "Miss Nantharat Jattawee "
+    portrait: /uploads/rtlprofile-106-.jpg
+    degree: Bachelor of Education Program in Thai Language
+    experience: "Teach Thai to foreigners at RTL School "
+  - name: Miss Thipsuda Slangdang
+    portrait: /uploads/rtlprofile-130-.jpg
+    degree: Bachelor of Arts Program in English
+    experience: "Teach Thai to foreigners at RTL School and I used to teach at a
+      private school called Holy Redeemer Banphai School and I used to work Thai
+      Airways "
+  - name: Miss Parita Moopayak
+    portrait: /uploads/rtlprofile-138-.jpg
+    degree: Bachelor of Education Program in Thai Language
+    experience: each Thai to foreigners at RTL School and I used to teach at a
+      government school ;Phutthabucha School and Pratum Anusorn School
+  - name: "Miss Watsharaporn Noikorn  "
+    degree: " Bachelor of Arts Library and Information Science "
+    experience: "Teach Thai to foreigners at RTL School "
+    portrait: /uploads/rtlprofile-153-.jpg
+  - name: Miss Ponnamtip Phaowiangkham
+    degree: Bachelor of Education Program in Thai Language
+    experience: " Teach Thai to foreigners at RTL School"
+    portrait: /uploads/rtlprofile-13-.jpg
+  - name: "Mr. Manunsak Jattawee "
+    degree: " Bachelor of Industrial Education and Technology (Biotechnology)"
+    experience: Teach Thai to foreigners at RTL School and I used to work an RD
+      (product development)  at company Ajino Takara and researcher and analyze
+      statistical data for Thipwaree Foods Company Limited
+    portrait: /uploads/rtlprofile-164-.jpg
 type: courses
 menu:
   main:
