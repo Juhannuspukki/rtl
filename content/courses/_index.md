@@ -24,4 +24,6 @@ menu:
   main:
     name: Courses
     weight: 2
+aliases:
+  - /method
 ---
