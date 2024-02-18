@@ -2,7 +2,7 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 4rem 0;
+  margin: 2rem 0 4rem;
   @media only screen and (max-width: 712px) {
     max-width: 320px;
     grid-template-columns: 1fr;
