@@ -21,8 +21,10 @@ khruu:
   - name: Khruu Srijan Baonok
     portrait: /uploads/rtlprofile-242-.jpg
     degree: Bachelor of Business Administration (General Management)
-    experience: 25 years. 2 years at English Volunteer Unit, 11 years at UTL School,
-      and 12 years at RTL School.
+    experience: "Teach Thai to foreigners for 25 years   01 Apr 2012 – Present : 12
+      Year for Teach Thai to foreigners at RTL School  ( 1/4/55)  \t\t   Mar
+      2012 – 2000 : 11 years for Teach Thai to foreigners at UTL School    2000
+      – 1998 : 2 years at English Volunteer Unit "
   - name: Khruu Busabong Piriyamanop Osato
     portrait: /uploads/rtlprofile-194-.jpg
     degree: Bachelor of Arts Program in English
