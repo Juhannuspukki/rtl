@@ -37,4 +37,8 @@ peopleSection:
         portrait: /uploads/rtlprofile-12-.jpg
       - name: "Khruu Manunsak Jattawee "
         portrait: /uploads/rtlprofile-164-.jpg
+  - title: Our Staff
+    people:
+      - name: Khun Natthita Promsa-ard
+        portrait: /uploads/rtlprofile-82-.jpg
 ---
