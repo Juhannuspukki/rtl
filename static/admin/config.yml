@@ -62,7 +62,7 @@ collections:
           - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
           - { label: "Title", name: title, widget: "string" }
           - { label: "Subtitle", name: subtitle, widget: "string",  required: false }
-          - { label: "Text section", name: textSection, widget: "markdown",  required: false }
+          - { label: "Text section", name: textContent, widget: "markdown",  required: false }
       - label: "Study online"
         name: "study-online"
         file: "content/courses/study-online/_index.md"
