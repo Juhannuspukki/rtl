@@ -84,6 +84,6 @@ type: courses
 menu:
   main:
     name: Private lessons
-    weight: 4
+    weight: 5
     parent: Courses
 ---

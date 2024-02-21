@@ -4,14 +4,15 @@
         <div class="container">
             <h1>{{ .Title }}</h1>
             <h2>{{ .Params.subtitle }}</h2>
+            <p class="ingress">
+                {{ .Params.textContent }}
+            </p>
         </div>
     </header>
 
     <main>
 
-        {{ partial "schedule" . }}
-
-        {{ partial "pricing" . }}
+        {{ partial "courses" . }}
 
     </main>
 

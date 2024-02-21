@@ -2,7 +2,7 @@
 menu:
     main:
         name: Study online
-        weight: 3
+        weight: 4
         parent: Courses
 type: courses
 layout: study-online
