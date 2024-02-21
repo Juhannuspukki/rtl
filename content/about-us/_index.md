@@ -4,7 +4,6 @@ menu:
     name: Teachers
     weight: 3
 title: Teachers
-subtitle: Teachers
 textSection: All our teachers, or *khruu* are highly trained, highly
   professional and have many years teaching of experience. We are ready to teach
   you Thai!
@@ -37,7 +36,7 @@ peopleSection:
         portrait: /uploads/rtlprofile-12-.jpg
       - name: "Khruu Manunsak Jattawee "
         portrait: /uploads/rtlprofile-164-.jpg
-  - title: Our Staff
+  - title: Our staff
     people:
       - name: Khun Natthita Promsa-ard
         portrait: /uploads/rtlprofile-82-.jpg
