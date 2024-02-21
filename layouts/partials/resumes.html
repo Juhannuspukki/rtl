@@ -5,11 +5,14 @@
   <div class="khruu-experience">
     {{ range .Params.khruu }}
       {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .portrait) }}
-      {{ $resizedPortrait := $imageResource.Resize "x320 q90 webp"}}
+      {{ $resizedPortrait1x := $imageResource.Resize "x320 q90 webp"}}
+      {{ $resizedPortrait2x := $imageResource.Resize "x640 q90 webp"}}
       <div class="khruu-experience-card">
-          <div>
-              <img src="{{ $resizedPortrait.RelPermalink }}" alt="">
-          </div>
+          <img
+              srcset="{{ $resizedPortrait1x.RelPermalink }}, {{ $resizedPortrait2x.RelPermalink }} 2x"
+              src="{{ $resizedPortrait2x.RelPermalink }}"
+              alt=""
+          >
         <div class="khruu-experience-text">
             <h3 class="name">{{ .name }}</h3>
             <h4>Education</h4>
