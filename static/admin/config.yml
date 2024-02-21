@@ -73,6 +73,17 @@ collections:
           - { label: "Subtitle", name: subtitle, widget: "string" }
           - { label: "Banner", name: banner, widget: "image" }
           - { label: "Text section", name: textSection, widget: "markdown" }
+      - label: "Activities"
+        name: "activities"
+        file: "content/courses/activities/_index.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Meta title (SEO)", name: metaTitle, widget: "string", required: false }
+          - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
+          - { label: "Title", name: title, widget: "string" }
+          - { label: "Pictures", name: imageGridElements, widget: list, fields: [
+              { label: "Picture", name: image, widget: "string" },
+              { label: "Picture title", name: title, widget: "string" },
+            ] }
       - label: "Private lessons"
         name: "private-lessons"
         file: "content/courses/private-lessons/_index.md"

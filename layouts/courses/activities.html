@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+    <header>
+        <div class="container">
+            <h1>{{ .Title }}</h1>
+            <h2>{{ .Params.subtitle }}</h2>
+            <p class="ingress">
+                {{ .Params.textContent | markdownify}}
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="image-grid">
+                {{ range .Params.imageGridElements }}
+                    <div class="image-card">
+                        {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .image) }}
+                        <img src="{{ $imageResource.RelPermalink }}" alt="{{ .title }} ">
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </main>
+
+{{ end }}
