@@ -5,8 +5,8 @@
     <div class="khruu-cards">
         {{ range .people }}
             {{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .portrait) }}
-            {{ $resizedPortrait1x := $imageResource.Resize "x320 q90 webp"}}
             {{ $resizedPortrait2x := $imageResource.Resize "x640 q90 webp"}}
+            {{ $resizedPortrait1x := $resizedPortrait2x.Resize "x320 q90 webp"}}
             <div class="khruu-card">
                 <img
                     srcset="{{ $resizedPortrait1x.RelPermalink }}, {{ $resizedPortrait2x.RelPermalink }} 2x"
