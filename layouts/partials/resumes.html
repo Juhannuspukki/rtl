@@ -8,11 +8,13 @@
       {{ $resizedPortrait2x := $imageResource.Resize "x640 q90 webp"}}
       {{ $resizedPortrait1x := $resizedPortrait2x.Resize "x320 q90 webp"}}
       <div class="khruu-experience-card">
-          <img
-              srcset="{{ $resizedPortrait1x.RelPermalink }}, {{ $resizedPortrait2x.RelPermalink }} 2x"
-              src="{{ $resizedPortrait2x.RelPermalink }}"
-              alt=""
-          >
+          <div>
+              <img
+                  srcset="{{ $resizedPortrait1x.RelPermalink }}, {{ $resizedPortrait2x.RelPermalink }} 2x"
+                  src="{{ $resizedPortrait2x.RelPermalink }}"
+                  alt=""
+              >
+          </div>
         <div class="khruu-experience-text">
             <h3 class="name">{{ .name }}</h3>
             <h4>Education</h4>
