@@ -1,21 +1,24 @@
 {{ $headlessBundle := .Site.GetPage "/headless_data" }}
 {{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "schedule.md" ) }}
 
-<section class="schedule">
-    {{ with $headlessData }}
-        {{ if .Params.currentYearSchedule }}
-            {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.currentYearSchedule) }}
-            <div class="schedule-image">
-                <h2>{{ .Params.currentYear }}</h2>
-                <a href="{{ $imageResource.Permalink }}"><img src="{{ $imageResource.Permalink }}" alt="Class schedule for year {{ .Params.currentYear }}"></a>
-            </div>
-        {{ end}}
-        {{ if .Params.nextYearSchedule }}
-            {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.nextYearSchedule) }}
-            <div class="schedule-image">
-                <h2>{{ .Params.nextYear }}</h2>
-                <a href="{{ $imageResource.Permalink }}"><img src="{{ $imageResource.Permalink }}" alt="Class schedule for year {{ .Params.nextYear }}"></a>
-            </div>
-        {{ end}}
-    {{end}}
+<section class="schedule-container">
+    <div class="schedule">
+        {{ with $headlessData }}
+            {{ if .Params.currentYearSchedule }}
+                {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.currentYearSchedule) }}
+                <div class="schedule-image">
+                    <h2>{{ .Params.currentYear }}</h2>
+                    <a href="{{ $imageResource.Permalink }}"><img src="{{ $imageResource.Permalink }}" alt="Class schedule for year {{ .Params.currentYear }}"></a>
+                </div>
+            {{ end}}
+            {{ if .Params.nextYearSchedule }}
+                {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.nextYearSchedule) }}
+                <div class="schedule-image">
+                    <h2>{{ .Params.nextYear }}</h2>
+                    <a href="{{ $imageResource.Permalink }}"><img src="{{ $imageResource.Permalink }}" alt="Class schedule for year {{ .Params.nextYear }}"></a>
+                </div>
+            {{ end}}
+        {{end}}
+    </div>
+    <p class="click-to-enlarge"><i>Click to enlarge</i></p>
 </section>
