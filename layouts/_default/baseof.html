@@ -55,6 +55,20 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
 
+  <script>
+    (function(n){
+      const userLang = n.language || n.userLanguage;
+      fetch('https://language-analytics.vercel.app/api/hello', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ "language": userLang })
+      })
+    })(navigator)
+  </script>
+
 </head>
 
 <body>
