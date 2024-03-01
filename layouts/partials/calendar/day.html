@@ -1,0 +1,67 @@
+{{ $context := .context }}
+{{ $year := .year }}
+
+{{ $day := .day }}
+{{ $dayTwoLetters := printf "%02d" $day }}
+{{ $pageMap := .pagemap }}
+
+{{ $month := .month }}
+{{ $monthTwoLetters := printf "%02d" $month }}
+
+{{ $dateString := (string (delimit (slice $year $monthTwoLetters $dayTwoLetters) "-")) }}
+
+{{ $context.Scratch.Set "isFuture" false }}
+
+{{ $headlessBundle := site.GetPage "/headless_data" }}
+{{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "calendar.md" ) }}
+
+{{ $courseStart := false }}
+{{ $courseEnd := false }}
+{{ $courseOngoing := false }}
+{{ $holiday := false }}
+
+{{ with $headlessData }}
+    {{ range .Params.courses }}
+        {{ if and (ge $dateString .startDate) (le $dateString .endDate) }}
+            {{ $courseOngoing = true }}
+        {{ end }}
+    {{ end }}
+
+    {{ range .Params.courses }}
+        {{ if eq $dateString .startDate }}
+            {{ $courseStart = true }}
+        {{ end }}
+    {{ end }}
+
+    {{ range .Params.courses }}
+        {{ if eq $dateString .endDate }}
+            {{ $courseEnd = true }}
+        {{ end }}
+    {{ end }}
+
+    {{ range .Params.holidays }}
+        {{ if eq $dateString .date }}
+            {{ $holiday = true }}
+        {{ end }}
+    {{ end }}
+
+    {{ if le now (time $dateString) }}
+        {{ $context.Scratch.Set "isFuture" true }}
+    {{ end }}
+
+{{ end }}
+
+{{ $isFuture := $context.Scratch.Get "isFuture" }}
+
+<li
+    class="calendar-day
+    {{ if $isFuture }}calendar-day-future{{ end }}
+    {{ if $courseOngoing }}calendar-day-ongoing{{ end }}
+    {{ if $courseStart }}calendar-day-start{{ end }}
+    {{ if $courseEnd }}calendar-day-end{{ end }}
+    {{ if $holiday }}calendar-day-holiday{{ end }}
+    {{ if eq (now.Format "2006-01-02") $dateString }}calendar-day-is-today{{ end }}"
+    title="{{ if $courseStart }}Start date{{ end }}{{ if $courseEnd }}End date{{ end }}{{ if $holiday }}Holiday{{ end }}"
+    >
+        <time datetime="{{ $dateString }}">{{ $day }}<em></em></time>
+</li>

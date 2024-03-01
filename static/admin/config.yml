@@ -192,14 +192,18 @@ collections:
                 { label: "Description", name: description, widget: "markdown" },
               ] }
             ] }
-      - label: "Schedule"
-        name: "schedule"
-        file: "content/headless_data/schedule.md"
+      - label: "Calendar"
+        name: "calendar"
+        file: "content/headless_data/calendar.md"
         fields: # The fields for each document, usually in front matter
-          - { label: "Title for current year", name: currentYear, widget: "string" }
-          - { label: "Schedule for current year", name: currentYearSchedule, widget: "image" }
-          - { label: "Title for next year", name: nextYear, widget: "string" }
-          - { label: "Schedule for next year", name: nextYearSchedule, widget: "image" }
+          - { label: "Title (year added automatically)", name: title, widget: "string" }
+          - { label: "Course dates", name: courses, widget: list, fields: [
+              { label: "Start date", name: startDate, widget: "dateTime", date_format: "YYYY-MM-DD", picker_utc: true },
+              { label: "End date", name: endDate, widget: "dateTime" },
+            ] }
+          - { label: "Holidays", name: holidays, widget: list, fields: [
+              { label: "Date of holiday", name: date, widget: "dateTime", date_format: "YYYY-MM-DD", picker_utc: true },
+            ] }
       - label: "Social media buttons"
         name: "social-media"
         file: "content/headless_data/social-media.md"

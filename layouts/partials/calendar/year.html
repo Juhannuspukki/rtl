@@ -1,0 +1,25 @@
+{{ $months := seq 12 }}
+{{ $context := .context }}
+{{ $year := .year }}
+{{ $from := .from }}
+{{ $fromMonth := .fromMonth }}
+{{ $to := .to }}
+{{ $toMonth := .toMonth }}
+
+
+{{ $headlessBundle := site.GetPage "/headless_data" }}
+{{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "calendar.md" ) }}
+
+<section class="calendar">
+    <h3 class="year-title">{{ $headlessData.Params.title }} {{ $year }}</h3>
+    <div class="legend-box">
+        <span class="color-box start"></span><span class="legend">Start of course</span>
+        <span class="color-box end"></span><span class="legend">End of course</span>
+        <span class="color-box holiday"></span><span class="legend">Holiday</span>
+    </div>
+    <div class="calendar-year">
+        {{ range $month := seq $fromMonth $toMonth }}
+            {{ partial "calendar/month" (dict "context" $context "year" $year "month" $month) }}
+        {{ end }}
+    </div>
+</section>
