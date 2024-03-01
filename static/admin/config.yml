@@ -198,11 +198,11 @@ collections:
         fields: # The fields for each document, usually in front matter
           - { label: "Title (year added automatically)", name: title, widget: "string" }
           - { label: "Course dates", name: courses, widget: list, fields: [
-              { label: "Start date", name: startDate, widget: "datetime", date_format: "YYYY-MM-DD", picker_utc: true },
-              { label: "End date", name: endDate, widget: "datetime" },
+              { label: "Start date", name: startDate, widget: "datetime", date_format: "YYYY-MM-DD" },
+              { label: "End date", name: endDate, widget: "datetime", date_format: "YYYY-MM-DD" },
             ] }
           - { label: "Holidays", name: holidays, widget: list, fields: [
-              { label: "Date of holiday", name: date, widget: "datetime", date_format: "YYYY-MM-DD", picker_utc: true },
+              { label: "Date of holiday", name: date, widget: "datetime", date_format: "YYYY-MM-DD" },
             ] }
       - label: "Social media buttons"
         name: "social-media"
