@@ -23,7 +23,10 @@ segments:
        [Click here to view in Google Maps](https://maps.app.goo.gl/QC5hyCZtvPyC3WdW9)
   - title: Opening hours
     content: |-
-      Our office is open every day, excluding weekends and holidays
+      Our office is open every day, excluding weekends and holidays.
+
+     
+      See [a list of holidays here.](/courses/schedule)
 
 
       Morning: 9:00 - 12:00  
