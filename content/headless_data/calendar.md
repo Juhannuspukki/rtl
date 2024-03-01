@@ -1,8 +1,8 @@
 ---
 title: Course calendar for year
 courses:
-  - endDate: 2024-03-29
-    startDate: 2024-03-04
+  - endDate: 2024-01-31
+    startDate: 2024-01-04
   - startDate: 2024-02-01
     endDate: 2024-02-29
   - startDate: 2024-03-04
