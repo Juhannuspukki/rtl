@@ -12,16 +12,11 @@ categories:
           yourself, ordering food, asking directions, to expressing preferences
           and comparing things.
       - title: Speaking level 2
-        description: Continuing from Reading and Writing Level 1, the students learn the
-          remaining Thai consonants and vowels as well as the tone rules of the
-          written Thai language. Knowledge of the Thai writing system, continues
-          to add to the students vocabulary and conversation skills. Students’
-          writing skills are improved by daily dictation exercises and homework
-          assignments.
+        description: In Speaking Level 2, students  expand their vocabulary and conversation skills. This course covers many new conversation patterns. Students will learn and practice topics ranging from geography, weather, and body parts, to emotions and seasons of the year and much more.
       - title: Speaking level 3
         description: This course introduces the student to more speaking patterns and
-          vocabular. By the end of this course the student will have a strong
-          foundation in the Thai language and be able to speak confidently in
+          vocabulary. By the end of this course the student will have a strong
+          foundation in the Thai language and is able to speak confidently in
           everyday conversation, having built up many conversation patterns and
           an extensive vocabulary. After completing this course, the student is
           ready to progress to learning reading and writing. For those students
@@ -36,7 +31,7 @@ categories:
       - title: Speaking level 5
         description: In this course, students learn about life in Thailand, and discuss
           various topics including Thai fruits, the Chao Phraya River, and the
-          famous Chatuchuk weekend market in detail. Students will also learn
+          famous Chatuchak weekend market in detail. Students will also learn
           formal conversational skills, which are used in everyday life, in the
           news and on TV or in more formal setting.
   - title: Reading and writing
