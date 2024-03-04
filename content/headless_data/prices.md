@@ -9,7 +9,7 @@ prices:
     time: 13:00 - 16:00
     price: 7500 baht
   - title: Evening courses
-    time: 16:00 - 18:00
+    time: 18:00 - 20:00
     price: 8500 baht
 text: Enroll for 3 months or more and receive a 5% discount!
 ---
