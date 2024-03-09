@@ -4,15 +4,14 @@
         <div class="container">
             <h1>{{ .Title }}</h1>
             <h2>{{ .Params.subtitle }}</h2>
-            <div class="ingress">
-                {{ .Params.textContent | markdownify}}
-            </div>
         </div>
     </header>
 
-    <main class="container">
+    <main>
 
-        {{ partial "schedule" . }}
+        {{ partial "calendar" (dict "context" . "from" 2024 "fromMonth" (now.Format "01") "to" 2024 "toMonth" 12 "pages" .Site.Pages) }}
+
+        {{ partial "pricing" . }}
 
     </main>
 

@@ -1,6 +1,74 @@
 {{ $headlessBundle := .Site.GetPage "/headless_data" }}
-{{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "schedule.md" ) }}
+{{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "calendar.md" ) }}
 
-<div class="container">
-    {{ partial "calendar" (dict "context" . "from" 2024 "fromMonth" (now.Format "01") "to" 2024 "toMonth" 12 "pages" .Site.Pages) }}
-</div>
+{{ with $headlessData }}
+    <section class="schedule">
+
+        {{ $holidays := .Params.holidays }}
+        {{ $previousYear := "1970-01-01" | time }}
+
+        {{ range .Params.courses }}
+            {{/*Print year number when year changes */}}
+            {{ $currentYear := .startDate | time }}
+            {{ if not (eq $previousYear.Year $currentYear.Year) }}
+                <h2>Schedule for {{ $currentYear.Year }}</h2>
+                <div class="double-button-container">
+                    <a class="double-button-link active" href="/courses/schedule">List view</a>
+                    <a class="double-button-link" href="/courses/calendar">Calendar view</a>
+                </div>
+                {{ $previousYear = $currentYear }}
+            {{ end }}
+
+            {{ $start := .startDate | time }}
+
+            {{ if gt ($start.AddDate 0 1 0) now }}
+                <div class="course-schedule-container">
+                    {{ $day := $start.Day }}
+                    {{ if gt $day 15 }}
+                        <h3>{{ ($start.AddDate 0 1 0).Month }} course</h3>
+                    {{ else }}
+                        <h3>{{ $start.Month }} course</h3>
+                    {{ end }}
+
+                    {{/*Count holidays within a course*/}}
+                    {{ $holidayCount := 0 }}
+                    {{ $startDate := .startDate }}
+                    {{ $endDate := .endDate }}
+                    {{ range $holidays }}
+                        {{ if and (gt .date $startDate) (lt .date $endDate) }}
+                            {{ $holidayCount = add $holidayCount 1 }}
+                        {{ end}}
+                    {{ end}}
+
+                    <div class="course-schedule">
+                        <div class="start-card">
+                            <p class="card-title">Start date</p>
+                            <p class="card-date">{{ dateFormat "2006-01-02" .startDate | dateFormat "2" }}</p>
+                            <p class="card-month">{{ dateFormat "2006-01-02" .startDate | dateFormat "January" }}</p>
+                        </div>
+                        <div class="end-card">
+                            <p class="card-title">End date</p>
+                            <p class="card-date">{{ dateFormat "2006-01-02" .endDate | dateFormat "2" }}</p>
+                            <p class="card-month">{{ dateFormat "2006-01-02" .endDate | dateFormat "January" }}</p>
+                        </div>
+                        {{ if gt $holidayCount 0 }}
+                            <div class="holiday-card">
+                                <p class="card-title">Holidays during course</p>
+                                <div class="holiday-dates">
+                                    {{ range $holidays }}
+                                        {{ if and (gt .date $startDate) (lt .date $endDate) }}
+                                            <div class="holiday-date">
+                                                <p class="holiday-day">{{ dateFormat "2006-01-02" .date | dateFormat "2" }}</p>
+                                                <p class="holiday-month">{{ dateFormat "2006-01-02" .date | dateFormat "January" }}</p>
+                                            </div>
+                                        {{ end}}
+                                    {{ end }}
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            {{end}}
+        {{ end }}
+    </section>
+{{ end }}

@@ -12,15 +12,17 @@
 
 {{ $currentYear := $from }}
 
-{{ range $i, $sequence := seq 0 ((sub (sub $to $from) 1) | add 1) }}
-    {{ $currentToMonth := 12 }}
-    {{ if eq $currentYear $to }}
-        {{ $currentToMonth = $toMonth }}
+<div class="container">
+    {{ range $i, $sequence := seq 0 ((sub (sub $to $from) 1) | add 1) }}
+        {{ $currentToMonth := 12 }}
+        {{ if eq $currentYear $to }}
+            {{ $currentToMonth = $toMonth }}
+        {{ end }}
+        {{ if and (eq $currentYear $to) (gt $toMonth $to) }}
+            {{ $currentToMonth = $toMonth }}
+        {{ end }}
+        {{ partial "calendar/year" (dict "context" $context "year" $currentYear "from" $from "fromMonth" $fromMonth "to" $to "toMonth" $currentToMonth "pages" $pages) }}
+        {{ $currentYear = add $currentYear 1 }}
+        {{ $fromMonth = 1 }}
     {{ end }}
-    {{ if and (eq $currentYear $to) (gt $toMonth $to) }}
-        {{ $currentToMonth = $toMonth }}
-    {{ end }}
-    {{ partial "calendar/year" (dict "context" $context "year" $currentYear "from" $from "fromMonth" $fromMonth "to" $to "toMonth" $currentToMonth "pages" $pages) }}
-    {{ $currentYear = add $currentYear 1 }}
-    {{ $fromMonth = 1 }}
-{{ end }}
+</div>
