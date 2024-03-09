@@ -40,6 +40,18 @@
                     >
                 </a>
             </div>
+            <div class="contact-card">
+                <h2>{{ .Params.cartoonMapSquareTitle }}</h2>
+                {{ $cartoonMapResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.cartoonMap) }}
+                {{ $resizedCartoonMap := $cartoonMapResource.Resize "800x q90 webp"}}
+                <a href="{{ $cartoonMapResource.Permalink }}" target="_blank" rel="noopener noreferrer">
+                    <img
+                        class="map"
+                        src="{{ $resizedCartoonMap.Permalink }}"
+                        alt="{{ .Params.mapAltText }}"
+                    >
+                </a>
+            </div>
         </div>
     </main>
 
