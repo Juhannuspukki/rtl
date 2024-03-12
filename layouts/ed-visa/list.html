@@ -11,7 +11,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <section class="container">
             <h2>{{ .Params.durationTitle }}</h2>
             <div class="visa-cards">
                 {{ range .Params.durationCards }}
@@ -24,7 +24,9 @@
                     </div>
                 {{ end }}
             </div>
-        </div>
+        </section>
+
+        {{ partial "qa" . }}
     </main>
 
 {{ end }}

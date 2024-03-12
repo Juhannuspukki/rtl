@@ -7,6 +7,7 @@ body {
 
 header {
   padding-top: 80px;
+  margin-bottom: 4rem;
 }
 
 h1 {
@@ -49,7 +50,7 @@ a {
   text-decoration: none;
 }
 
-p, ul, ol {
+div, p, ul, ol {
   font-family: $bread-font;
 }
 

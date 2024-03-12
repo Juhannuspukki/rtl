@@ -1,0 +1,15 @@
+<section class="container">
+    <div class="qa">
+        <h2>{{ .Params.qaTitle }}</h2>
+        <div>
+            {{ range .Params.qa }}
+                <div class="qa-card">
+                    <h3>{{ .question }}</h3>
+                    <div>
+                        {{ .answer | markdownify }}
+                    </div>
+                </div>
+            {{end}}
+        </div>
+    </div>
+</section>
