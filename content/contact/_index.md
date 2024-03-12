@@ -24,8 +24,7 @@ mapSquareTitle: Map
 map: smallmap.png
 mapLink: https://maps.app.goo.gl/gS6Z7XnaiLEMahDh8
 mapAltText: Map of the city of Bangkok centered on the Phloen Chit station with a marker on the adjacent Mahatun Plaza building.
-cartoonMapSquareTitle: Finding the entrance
+cartoonMapSquareTitle: Locating the entrance
 cartoonMap: rtlgraphic.png
 cartoonMapAltText: Map of the location of Mahatun Plaza, a building located between Bangkok Bank and Novotel hotel.
-
 ---
