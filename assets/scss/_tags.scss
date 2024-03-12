@@ -10,10 +10,17 @@ header {
   margin-bottom: 4rem;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: $header-font;
   font-weight: 700;
   color: $light-color;
+  &::selection {
+    color: $background-color;
+    background-color: $cheery-color-dark;
+  }
+}
+
+h1 {
   text-align: center;
   font-size: calc(1.4rem + 1.9vw);
   @media only screen and (min-width: 712px) {
@@ -22,9 +29,6 @@ h1 {
 }
 
 h2 {
-  font-family: $header-font;
-  font-weight: 700;
-  color: $light-color;
   text-align: center;
   line-height: 1.6;
   font-size: calc(1rem + 1.6vw);
@@ -34,10 +38,7 @@ h2 {
 }
 
 h3 {
-  font-family: $header-font;
-  font-weight: 700;
   font-size: 1.4rem;
-  color: $light-color;
 }
 
 hr {
@@ -48,10 +49,18 @@ hr {
 
 a {
   text-decoration: none;
+  &::selection {
+    color: $background-color;
+    background-color: $cheery-color-dark;
+  }
 }
 
-div, p, ul, ol {
+div, p, ul, ol, i, b, em {
   font-family: $bread-font;
+  &::selection {
+    color: $background-color;
+    background-color: $cheery-color-dark;
+  }
 }
 
 figure {
@@ -71,6 +80,13 @@ figure {
     text-align: center;
     font-family: $bread-font;
     color: $dark-color;
+  }
+}
+
+img {
+  &::selection {
+    color: $background-color;
+    background-color: $cheery-color-dark;
   }
 }
 
