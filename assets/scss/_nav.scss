@@ -58,7 +58,9 @@
             list-style: none;
             padding: 0;
             li {
-              padding-left: 1.5rem;
+              a {
+                padding-left: 4rem;
+              }
               &:last-of-type {
                 border-bottom: 0;
               }
@@ -70,7 +72,7 @@
           display: flex;
           font-family: $header-font;
           font-weight: 700;
-          font-size: 1.25rem;
+          font-size: 1.1rem;
           text-transform: uppercase;
           color: $cheery-color;
           &.active {
@@ -164,10 +166,10 @@
           > li.menu-item {
             a {
               height: 5rem;
-              padding: 0 1rem;
               display: flex;
               align-items: center;
               justify-content: center;
+              font-size: 1.25rem;
               .menu-title {
                 svg {
                   display: inline;
@@ -206,6 +208,7 @@
                   padding: 0;
                   a {
                     height: 3rem;
+                    padding: 0 1rem;
                     color: $background-color;
                     font-size: 1rem;
                     flex-grow: 1;
@@ -222,7 +225,7 @@
               border: none;
             }
             a {
-              padding: 1rem;
+              padding: 0 1rem;
               display: inline-block;
             }
           }
