@@ -2,7 +2,7 @@
 menu:
     main:
         name: Learn iisaan language
-        weight: 6
+        weight: 7
         parent: Courses
 type: courses
 layout: minority-languages
