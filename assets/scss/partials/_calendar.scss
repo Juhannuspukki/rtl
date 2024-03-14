@@ -7,7 +7,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
 }
 
 .calendar {
@@ -24,14 +24,16 @@
     .color-box {
       display: inline-block;
       height: 2rem;
-      border-radius: 0.25rem;
       width: 4rem;
       margin-right: 0.5rem;
+      border-radius: 0.75rem;
       &.start {
         background-color: $cheery-color;
+        border-radius: 0.75rem 0 0 0.75rem;
       }
       &.end {
         background-color: $complementary-color;
+        border-radius: 0 0.75rem 0.75rem 0;
       }
       &.holiday {
         background-color:  $light-color;
@@ -133,7 +135,6 @@
   line-height: 2.5rem;
   font-size: 0.85rem;
   text-align: center;
-  border-radius: 0.25rem;
   position: relative;
 
   &.calendar-day-ongoing {
@@ -144,6 +145,7 @@
     &::before {
       @include highlight;
       background-color: $cheery-color;
+      border-radius: 0.75rem 0 0 0.75rem;
     }
   }
 
@@ -152,6 +154,7 @@
     &::before {
       @include highlight;
       background-color: $complementary-color;
+      border-radius: 0 0.75rem 0.75rem 0;
     }
   }
 
