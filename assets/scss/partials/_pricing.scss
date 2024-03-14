@@ -3,9 +3,9 @@
   h2 {
     margin-bottom: 0;
   }
-  .subtitle {
+  .price-text {
     text-align: center;
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
     color: $light-color;
     font-weight: 700;
   }
@@ -30,8 +30,9 @@
   .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    margin: 2rem 0  2rem 0;
     .card {
-      margin: 1rem;
       border-radius: 1rem;
       background-color: $cheery-color;
       h3 {

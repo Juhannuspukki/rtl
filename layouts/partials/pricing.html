@@ -5,7 +5,7 @@
   {{ with $headlessData }}
     <div class="cards">
       <h2>{{ .Params.title }}</h2>
-      <p class="subtitle">{{ .Params.subtitle }}</p>
+      <p class="price-text">{{ .Params.subtitle }}</p>
       {{ with .Params.prices }}
         <div class="card-container">
           {{ range . }}
@@ -19,7 +19,7 @@
       {{ else }}
         <p>No prices found.</p>
       {{ end }}
-      <p class="subtitle">{{ .Params.text }}</p>
+      <p class="price-text">{{ .Params.text }}</p>
       <div class="cta-links">
         {{ range .Params.cta }}
             <a class="cta-registration" href="{{ .link }}" aria-label="{{ .label }}">
