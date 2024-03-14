@@ -20,6 +20,14 @@
         <p>No prices found.</p>
       {{ end }}
       <p class="subtitle">{{ .Params.text }}</p>
+      <div class="cta-links">
+        {{ range .Params.cta }}
+            <a class="cta-registration" href="{{ .link }}" aria-label="{{ .label }}">
+              {{ $icon := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .icon) }}
+              <img src="{{ $icon.Permalink }}" alt="">
+            </a>
+        {{ end }}
+      </div>
     </div>
     {{ else }}
       <p>No data found.</p>

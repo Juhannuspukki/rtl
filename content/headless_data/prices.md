@@ -12,4 +12,11 @@ prices:
     time: 18:00 - 20:00
     price: 8500 baht
 text: Enroll for 3 months or more and receive a 5% discount!
+cta:
+  - icon: registerwithline.svg
+    label: Register with Line
+    link: https://line.me/ti/p/r2YsExlNUi
+  - icon: registerwithwhatsapp.svg
+    label: Register with WhatsApp
+    link: https://wa.me/66619785962
 ---

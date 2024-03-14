@@ -1,0 +1,56 @@
+.cards {
+  margin-bottom: 4rem;
+  h2 {
+    margin-bottom: 0;
+  }
+  .subtitle {
+    text-align: center;
+    margin: 0 0 2rem;
+    color: $light-color;
+    font-weight: 700;
+  }
+  .cta-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cta-registration {
+      margin-left: 1rem;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      img {
+        max-height: 3.5rem;
+        display: inline-block;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .card {
+      margin: 1rem;
+      border-radius: 1rem;
+      background-color: $cheery-color;
+      h3 {
+        margin-top: 2rem;
+        text-align: center;
+        color: $background-color;
+      }
+      p {
+        text-align: center;
+        margin: 0;
+        color: $background-color;
+        font-weight: 700;
+        &:last-of-type {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    @media only screen and (max-width: 712px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
