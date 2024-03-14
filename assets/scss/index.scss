@@ -8,6 +8,7 @@
 @import "ed-visa";
 @import "about-us";
 @import "activities";
+@import "partials/icon-grid";
 @import "partials/resume-cards";
 @import "partials/text-block";
 @import "partials/split-block";
@@ -109,39 +110,6 @@
       color: $background-color;
       background-color: $cheery-color;
     }
-  }
-}
-
-.icon-grid-title {
-  margin-bottom: 2rem;
-}
-
-.icon-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2rem;
-  .icon-card {
-    align-items: center;
-    color: $light-color;
-    .icon-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 120px;
-      }
-    }
-    p {
-      text-align: center;
-      max-width: 14rem;
-      margin: 1rem auto;
-    }
-  }
-  @media only screen and (max-width: 712px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media only screen and (max-width: 512px) {
-    grid-template-columns: 1fr ;
   }
 }
 
