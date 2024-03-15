@@ -41,13 +41,15 @@
       width: 100%;
       /* weird grid magic to ensure smooth transitions */
       display: grid;
+      overflow: auto;
+      max-height: calc(100vh - 6rem);
       grid-template-rows: 0fr;
       transition: grid-template-rows 0.1s cubic-bezier(0.5, 1, 0.5, 1);
       .menu {
-        overflow: hidden;
         list-style: none;
         margin: 0;
         padding: 0;
+        overflow-y: auto;
         li {
           border-bottom: 1px solid $cheery-color;
           &:first-of-type {
