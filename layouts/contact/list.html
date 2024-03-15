@@ -48,7 +48,19 @@
                     <img
                         class="map"
                         src="{{ $resizedCartoonMap.Permalink }}"
-                        alt="{{ .Params.mapAltText }}"
+                        alt="{{ .Params.cartoonMapAltText }}"
+                    >
+                </a>
+            </div>
+            <div class="contact-card">
+                <h2>{{ .Params.cartoonMap2SquareTitle }}</h2>
+                {{ $cartoonMap2Resource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.cartoonMap2) }}
+                {{ $resizedCartoonMap2 := $cartoonMap2Resource.Resize "800x q90 webp"}}
+                <a href="{{ $cartoonMap2Resource.Permalink }}" target="_blank" rel="noopener noreferrer">
+                    <img
+                        class="map"
+                        src="{{ $resizedCartoonMap2.Permalink }}"
+                        alt="{{ .Params.cartoonMap2AltText }}"
                     >
                 </a>
             </div>

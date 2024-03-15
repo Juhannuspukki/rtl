@@ -1,0 +1,46 @@
+<aside class="chat" id="chat">
+  <div class="chat-content">
+    <h3>Click to chat with us...</h3>
+    <div class="messaging-buttons">
+      <a href="https://line.me/ti/p/r2YsExlNUi" aria-label="Contact on Line">
+        {{ $iconResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch "line.svg" }}
+        <img src="{{ $iconResource.Permalink }}" alt="Line Logo">
+      </a>
+      <a href="https://wa.me/66619785962">
+        {{ $iconResource2 := ($.Site.GetPage "section" "uploads").Resources.GetMatch "wa.svg" }}
+        <img src="{{ $iconResource2.Permalink }}" alt="WhatsApp Logo">
+      </a>
+    </div>
+    <h3>...or send a message</h3>
+    <form
+          action="https://formspree.io/f/xrgnpvdl"
+          method="POST"
+    >
+      <label for="email-input">Email</label>
+      <input type="email" placeholder="your.email@domain.com" id="email-input" name="email" required>
+      <label for="message-input">Message</label>
+      <textarea placeholder="Hello! I would like to know more about..." id="message-input" name="message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <button class="chat-button" aria-label="Open chat" onclick="toggleChat()">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="open">
+      <rect width="48" height="48" rx="16" fill="#38A5DD"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1562 34.5349C15.2662 33.6576 10 28.9767 10 23.3411C10.0001 17.0819 16.4972 12 24.4999 12C32.5027 12 39 17.0818 39 23.3411C39 28.6214 34.3767 33.0632 28.1265 34.3244C28.9033 36.1626 30.1251 37.893 31.3129 39C27.1958 38.2742 24.3431 36.5151 22.1562 34.5349Z" fill="white"/>
+    </svg>
+    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="close">
+      <rect y="2.82837" width="4" height="30" transform="rotate(-45 0 2.82837)" fill="#38A5DD"/>
+      <rect x="21.2134" width="4" height="30" transform="rotate(45 21.2134 0)" fill="#38A5DD"/>
+    </svg>
+  </button>
+  <script>
+    function toggleChat () {
+      const element = document.getElementById("chat")
+      if (element.classList.contains("expanded")) {
+        element.classList.remove("expanded")
+      } else {
+        element.classList.add("expanded")
+      }
+    }
+  </script>
+</aside>

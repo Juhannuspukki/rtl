@@ -27,4 +27,7 @@ mapAltText: Map of the city of Bangkok centered on the Phloen Chit station with 
 cartoonMapSquareTitle: Locating the entrance
 cartoonMap: rtlgraphic.png
 cartoonMapAltText: Map of the location of Mahatun Plaza, a building located between Bangkok Bank and Novotel hotel.
+cartoonMap2SquareTitle: Map of the 10th floor
+cartoonMap2: rtl-graphic-2.png
+cartoonMap2AltText: Map of the location of RTL School withing the 10th floor of Mahatun Plaza.
 ---
