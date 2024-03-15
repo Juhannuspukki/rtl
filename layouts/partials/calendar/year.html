@@ -17,9 +17,9 @@
         <a class="double-button-link active" href="/courses/calendar">Calendar view</a>
     </div>
     <div class="legend-box">
-        <span class="color-box start"></span><span class="legend">Start of course</span>
-        <span class="color-box end"></span><span class="legend">End of course</span>
-        <span class="color-box holiday"></span><span class="legend">Holiday</span>
+        <div class="legend-container"><span class="color-box start"></span><span class="legend">Start of course</span></div>
+        <div class="legend-container"><span class="color-box end"></span><span class="legend">End of course</span></div>
+        <div class="legend-container"><span class="color-box holiday"></span><span class="legend">Holiday</span></div>
     </div>
     <div class="calendar-year">
         {{ range $month := seq $fromMonth $toMonth }}
