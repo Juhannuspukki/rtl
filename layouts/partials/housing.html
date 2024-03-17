@@ -8,7 +8,7 @@
           {{ range .images }}
             {{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .src) }}
             {{ $resizedImage := $imageResource.Resize "x320 q90 webp"}}
-            <a href="">
+            <a href="{{ $imageResource.Permalink }}">
               <img src="{{ $resizedImage.Permalink }}" alt="">
             </a>
           {{ end }}
