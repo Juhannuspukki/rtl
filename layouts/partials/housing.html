@@ -1,0 +1,30 @@
+<section class="container">
+  <div class="housing-container">
+    <h2>What is your budget?</h2>
+    <h3>Examples of rent prices in Bangkok</h3>
+    {{ range .Params.housingExamples}}
+      <div class="house">
+        <div class="house-images">
+          {{ range .images }}
+            {{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .src) }}
+            {{ $resizedImage := $imageResource.Resize "x320 q90 webp"}}
+            <a href="">
+              <img src="{{ $resizedImage.Permalink }}" alt="">
+            </a>
+          {{ end }}
+        </div>
+        <div class="house-text">
+          <h3 class="house-name">{{ .name }}</h3>
+          <p class="price">Rent {{ .price }} </p>
+          <i class="disclaimer">Price depends on contract length.</i>
+          <h4>Features</h4>
+          <ul>
+            {{ range .features }}
+              <li>{{ .text }}</li>
+            {{ end}}
+          </ul>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</section>

@@ -1,33 +1,38 @@
 <section class="container">
-    {{ $lineIcon := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "line.svg") }}
-    {{ $waIcon := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "wa.svg") }}
+    {{ $lineIcon := ($.Site.GetPage "section" "uploads").Resources.GetMatch "line.svg" }}
+    {{ $waIcon := ($.Site.GetPage "section" "uploads").Resources.GetMatch "wa.svg" }}
     {{ with .Params.agentSectionTitle }}
         <h2>{{ . }}</h2>
     {{ end }}
-    <div class="agent-cards">
-        {{ range .Params.agents }}
-            {{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .portrait) }}
-            {{ $resizedPortrait2x := $imageResource.Resize "x640 q90 webp"}}
-            {{ $resizedPortrait1x := $resizedPortrait2x.Resize "x320 q90 webp"}}
-            <div class="agent-card">
-                <img
-                    class="agent-portrait"
-                    srcset="{{ $resizedPortrait1x.RelPermalink }}, {{ $resizedPortrait2x.RelPermalink }} 2x"
-                    src="{{ $resizedPortrait2x.RelPermalink }}"
-                    alt=""
-                >
-                <div class="agent-card-content">
-                    <h3>{{ .name }}</h3>
-                    <p>{{ .title }}</p>
-                    <p>{{ .phone }}</p>
-                    <a href="{{ .line }}">
-                        <img src="{{ $lineIcon.RelPermalink }}" alt="Contact on Line">
-                    </a>
-                    <a href="{{ .whatsapp }}">
-                        <img src="{{ $waIcon.RelPermalink }}" alt="Contact on Whatsapp">
-                    </a>
+    <div class="agent-split-container">
+        <div class="agent-text">
+            {{ .Params.agentText | markdownify}}
+        </div>
+        <div class="agent-cards">
+            {{ range .Params.agents }}
+                {{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .portrait) }}
+                {{ $resizedPortrait2x := $imageResource.Resize "x640 q90 webp"}}
+                {{ $resizedPortrait1x := $resizedPortrait2x.Resize "x320 q90 webp"}}
+                <div class="agent-card">
+                    <img
+                        class="agent-portrait"
+                        srcset="{{ $resizedPortrait1x.RelPermalink }}, {{ $resizedPortrait2x.RelPermalink }} 2x"
+                        src="{{ $resizedPortrait2x.RelPermalink }}"
+                        alt=""
+                    >
+                    <div class="agent-card-content">
+                        <h3>{{ .name }}</h3>
+                        <p>{{ .title }}</p>
+                        <p>{{ .phone }}</p>
+                        <a href="{{ .line }}">
+                            <img src="{{ $lineIcon.RelPermalink }}" alt="Contact on Line">
+                        </a>
+                        <a href="{{ .whatsapp }}">
+                            <img src="{{ $waIcon.RelPermalink }}" alt="Contact on Whatsapp">
+                        </a>
+                    </div>
                 </div>
-            </div>
-        {{end}}
+            {{end}}
+        </div>
     </div>
 </section>
