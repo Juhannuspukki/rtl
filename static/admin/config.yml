@@ -81,7 +81,7 @@ collections:
           - { label: "Meta description (SEO)", name: metaDescription, widget: "string", required: false }
           - { label: "Title", name: title, widget: "string" }
           - { label: "Pictures", name: imageGridElements, widget: list, fields: [
-              { label: "Picture", name: image, widget: "string" },
+              { label: "Picture", name: image, widget: "image" },
               { label: "Picture title", name: title, widget: "string" },
             ] }
       - label: "Private lessons"
