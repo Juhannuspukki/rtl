@@ -5,12 +5,13 @@
     {{ with $headlessData }}
         <h2>{{ .Params.categoryTitle }}</h2>
         {{ range .Params.categories }}
+            {{ $color := .color }}
             <section class="container">
                 <h3>{{ .title }}</h3>
                 <div class="course-grid">
                     {{ range .courses }}
-                        <div class="course-card">
-                            <h4>{{ .title }}</h4>
+                        <div class="course-card" style="border-color: {{ $color }}">
+                            <h4 style="color: {{ $color }}">{{ .title }}</h4>
                             <p>
                                 {{ .description }}
                             </p>

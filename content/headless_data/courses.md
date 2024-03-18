@@ -2,6 +2,7 @@
 categoryTitle: Course list
 categories:
   - title: Speaking and listening
+    color: "#38a7de"
     courses:
       - title: Speaking level 1
         description: Speaking Level 1 begins by teaching the student to pronounce Thai
@@ -35,6 +36,7 @@ categories:
           formal conversational skills, which are used in everyday life, in the
           news and on TV or in more formal setting.
   - title: Reading and writing
+    color: "#92bd1e"
     courses:
       - title: Reading level 1
         description: This course introduces students to the Thai writing system.
@@ -63,6 +65,7 @@ categories:
           listening and writing skills are enhanced by  daily dictation
           exercises and homework assignments.
   - title: Advanced courses
+    color: "#DE6F38"
     courses:
       - title: Social problems
         description: This level introduces the student to some of the social problems
