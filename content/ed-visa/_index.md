@@ -3,7 +3,8 @@ menu: main
 weight: 2
 title: ED Visa
 subtitle: Stay in Thailand for up to 14 months!
-textContent: At Rak Thai Langauge Scool, you can get a Non-immigrant Education Visa, which allows you to stay in Thailand while studying the Thai language. Contact us to find out more, we will help with any paperwork!
+textContent: At Rak Thai Language School, you can get a Non-immigrant Education Visa, which allows you to stay in 
+Thailand while studying the Thai language. Contact us to find out more, we will help with any paperwork!
 durationTitle: ED Visa and extensions
 durationCards:
     - title: Basic studies
