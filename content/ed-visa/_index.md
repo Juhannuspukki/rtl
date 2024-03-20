@@ -3,8 +3,7 @@ menu: main
 weight: 2
 title: ED Visa
 subtitle: Stay in Thailand for up to 14 months!
-textContent: At Rak Thai Language School, you can get a Non-immigrant Education Visa, which allows you to stay in 
-Thailand while studying the Thai language. Contact us to find out more, we will help with any paperwork!
+textContent: At Rak Thai Language School, you can get a Non-immigrant Education Visa, which allows you to stay in Thailand while studying the Thai language. Contact us to find out more, we will help with any paperwork!
 durationTitle: ED Visa and extensions
 durationCards:
     - title: Basic studies
@@ -22,7 +21,7 @@ qaTitle: Questions and answers about the ED Visa
 qa:
     - question: How much does the ED Visa cost?
       answer: |-
-        The total cost for our ED Visa package including the processing fee for Ministry of Education and 3 courses is 24 500 baht. The tuition must be paid beforehand, as otherwise the Ministry will not accept the application.
+        The total cost for our ED Visa package including the processing fee for Ministry of Education and three courses is 24 500 baht. The tuition must be paid beforehand, as the Ministry of Education requires proof of payment before processing the application.
         
         Please note that this price does not include the fees by the Immigration Bureau.
     - question: How much will the Immigration Bureu charge me?
@@ -31,6 +30,16 @@ qa:
       answer: Yes! To obtain the ED Visa, enter Thailand with a tourist visa and then talk to us. We can change your tourist visa or visa exemption to an ED Visa. Please note that other visa types cannot be changed to an ED Visa.
     - question: How long does it take to obtain the ED Visa?
       answer: Obtaining the ED Visa means you need to get approval from two authorities; The Ministry of Education and the Immigration Bureau. The process can be somewhat lengthy and you should have at least 35-45 days left on your current tourist visa before talking to us.
+    - question: I entered Thailand with a visa exemption that is only valid for 30 days. Now what?
+      answer: |-
+        At the time of writing (March 2024) tourist visas and visa exemptions can be extended once by 30 days. If it seems that your tourist visa or exemption needs extending, you can submit an application at the Immigration Bureau.
+    - question: How do I extend my visa exemption to apply for the ED Visa?
+      answer: |-
+        Visa exemption extensions must be submitted to the Immigration Bureau at [IT Square Laksi.](https://maps.app.goo.gl/PjV4pLqVuqZXvEog8) This office does not process any other applications. Tourist visa extensions must be submitted at [The Government Complex.](https://maps.app.goo.gl/3D4DQG8x2wheksDN6) There are shops in both locations that offer photos, copying and printing services.
+
+        In both cases, three forms must be filled. These are the [TM7 form](https://www.immigration.go.th/wp-content/uploads/2022/10/4.คำขออนุญาตเพื่ออยู่ในราชอาณาจักรเป็นการชั่วคราวต่อไป-ตม.7.pdf), the [STM.2 form](https://bangkok.immigration.go.th/wp-content/uploads/Form-STM2.pdf) and the [overstay penalty form](https://bangkok.immigration.go.th/wp-content/uploads/Form-Acknowledgement-of-Overstay-Penalties.pdf). You also need photocopies of your passport: the information page, any entry stamps to Thailand and the visa (if you have one). Sometimes the TM30 form is also requested (read below). Filling the forms before going to the Immigration Bureau saves time.
+        
+        Tip: it can be useful to check the Google Reviews of the immigration offices beforehand. Travellers often write helpful and up-to-date information about changes in the application procedure.
     - question: I already speak some Thai, can I start from the intermediate level?
       answer: The Ministry of Education requires that all students start from the basic level.
     - question: If the application is rejected, can I get a refund?
