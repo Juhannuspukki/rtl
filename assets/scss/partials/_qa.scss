@@ -2,5 +2,15 @@
   margin-bottom: 4rem;
   .qa-card {
     margin-bottom: 2rem;
+    h3 {
+      margin: 2rem 0 1rem;
+    }
+  }
+  a {
+    color: $dark-color;
+    text-decoration: underline;
+    &:hover {
+      color: $cheery-color;
+    }
   }
 }
