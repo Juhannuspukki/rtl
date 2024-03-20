@@ -19,7 +19,7 @@ agentText: |-
     ### Step 1
     Make a short list of what you want from your home:  a budget, when you want to move in, type of house, facilities you are interested in such as a gym, a sauna, a swimming pool, a helicopter pad and/or a co-working space and any services nearby such as a market, shopping mall or IMAX.
     ### Step 2
-    Send your list to our partner Nuis on WhatsApp using [this link](https://line.me/ti/p/0k2_j2Cw2_) or on Line using [this link.](https://wa.me/66616424479)
+    Send your list to our partner Nuis on WhatsApp using [this link](https://wa.me/66616424479) or on Line using [this link.](https://line.me/ti/p/0k2_j2Cw2_)
     ### Step 3
     Nuis will start looking for a home for you and contact you with suggestions matching your criteria. You will be throwing a housewarming party in no time at all!
 agents:
