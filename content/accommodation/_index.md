@@ -1,9 +1,4 @@
 ---
-menu:
-    main:
-        name: Accommodation in Bangkok
-        weight: 6
-        parent: Courses
 banner: apartment.jpg
 title: Accommodation in Bangkok
 subtitle: A home for the duration of your studies
