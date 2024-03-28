@@ -13,6 +13,8 @@ textContent: |-
     Morning classes take place between 9:00 and 12:00. Afternoon classes are held between 13:00 and 16:00. Evening classes take place between 18:00 and 20:00.
     
     Private lessons with flexible schedules are also available both on weekdays and weekends.
+
+    To check course availability, please check our [Facebook](https://www.facebook.com/rtlschool/), [Instagram](https://www.instagram.com/rtlschool/) or [contact us](/courses/schedule).
 aliases:
     - /courses/timetable
 ---

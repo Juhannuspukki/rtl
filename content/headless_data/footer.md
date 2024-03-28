@@ -30,12 +30,14 @@ segments:
 
 
       Morning: 9:00 - 12:00  
-      Afternoon: 13:00 - 18:00
+      Afternoon: 13:00 - 17:30
   - title: Contact
     content: |-
       [Whatsapp: +66 61-978-5962](https://wa.me/66619785962)
 
       [Facebook page](https://www.facebook.com/rtlschool/)
+
+      [Instagram page](https://www.instagram.com/rtlschool/)
 
       [LINE: @rtlschool](https://line.me/ti/p/r2YsExlNUi)
 
