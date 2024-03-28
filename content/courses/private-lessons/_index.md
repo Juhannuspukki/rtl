@@ -21,10 +21,11 @@ khruu:
   - name: Khruu Srijan Baonok
     portrait: /uploads/rtlprofile-242-.jpg
     degree: Bachelor of Business Administration (General Management)
-    experience: "Teach Thai to foreigners for 25 years   01 Apr 2012 – Present : 12
-      Year for Teach Thai to foreigners at RTL School  Mar 2012 – 2000 : 11
-      years for Teach Thai to foreigners at UTL School    2000 – 1998 : 2 years
-      at English Volunteer Unit "
+    experience: |-
+      Teaching Thai to foreigners for 25 years  
+      01 Apr 2012 – Present: Teaching Thai to foreigners at RTL School  
+      Mar 2012 – 2000 : Teach Thai to foreigners at UTL School  
+      2000 – 1998 : 2 years at English Volunteer Unit  
   - name: Khruu Busabong Piriyamanop Osato
     portrait: /uploads/rtlprofile-194-.jpg
     degree: Bachelor of Arts Program in English
@@ -49,36 +50,30 @@ khruu:
   - name: "Miss Patchara Boonyuen  "
     portrait: /uploads/rtlprofile-94-.jpg
     degree: Bachelor of Science Program in Biology
-    experience: " Teach Thai to foreigners at RTL School and I used to teach at a
-      government school ; Wettawanwittaya school"
+    experience: "Teaching Thai to foreigners at RTL School. Also experience from Wettawanwittaya public school."
   - name: "Miss Nantharat Jattawee "
     portrait: /uploads/rtlprofile-106-.jpg
     degree: Bachelor of Education Program in Thai Language
-    experience: "Teach Thai to foreigners at RTL School "
+    experience: "Teaching Thai to foreigners at RTL School."
   - name: Miss Thipsuda Slangdang
     portrait: /uploads/rtlprofile-130-.jpg
     degree: Bachelor of Arts Program in English
-    experience: "Teach Thai to foreigners at RTL School and I used to teach at a
-      private school called Holy Redeemer Banphai School and I used to work Thai
-      Airways "
+    experience: "Teaching Thai to foreigners at RTL School. Also experience from Holy Redeemer Banphai School (private school). Earlier worked at Thai Airways."
   - name: Miss Parita Moopayak
     portrait: /uploads/rtlprofile-138-.jpg
     degree: Bachelor of Education Program in Thai Language
-    experience: each Thai to foreigners at RTL School and I used to teach at a
-      government school ;Phutthabucha School and Pratum Anusorn School
+    experience: "Teaching Thai to foreigners at RTL School. Taught also at Phutthabucha public school and Pratum Anusorn public school."
   - name: "Miss Watsharaporn Noikorn  "
     degree: " Bachelor of Arts Library and Information Science "
-    experience: "Teach Thai to foreigners at RTL School "
+    experience: "Teaching Thai to foreigners at RTL School."
     portrait: /uploads/rtlprofile-153-.jpg
   - name: Miss Ponnamtip Phaowiangkham
     degree: Bachelor of Education Program in Thai Language
-    experience: " Teach Thai to foreigners at RTL School"
+    experience: " Teaching Thai to foreigners at RTL School."
     portrait: /uploads/rtlprofile-13-.jpg
   - name: "Mr. Manunsak Jattawee "
     degree: " Bachelor of Industrial Education and Technology (Biotechnology)"
-    experience: Teach Thai to foreigners at RTL School and I used to work an RD
-      (product development)  at company Ajino Takara and researcher and analyze
-      statistical data for Thipwaree Foods Company Limited
+    experience: Teach Thai to foreigners at RTL School. Also experience from R&D at Ajino Takara and researcher and analyze statistical data for Thipwaree Foods Company Limited.
     portrait: /uploads/rtlprofile-164-.jpg
 type: courses
 menu:

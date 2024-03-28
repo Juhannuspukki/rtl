@@ -1,8 +1,9 @@
 .khruu-experience {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 3rem 2rem;
-  margin-bottom: 4rem;
+  max-width: 32rem;
+  margin: 0 auto 4rem;
   .khruu-experience-card {
     display: grid;
     grid-template-columns: 9rem 1fr;

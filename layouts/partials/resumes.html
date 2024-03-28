@@ -20,7 +20,7 @@
             <h4>Education</h4>
             <p class="degree">{{ with .degree }}{{ . }}{{ end }}</p>
             <h4>Experience in teaching Thai</h4>
-            <p class="experience">{{ with .experience }}{{ . }}{{ end }}</p>
+            <p class="experience">{{ with .experience }}{{ . | markdownify }}{{ end }}</p>
         </div>
       </div>
     {{end}}
