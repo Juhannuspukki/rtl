@@ -176,9 +176,19 @@ collections:
         name: "footer"
         file: "content/headless_data/footer.md"
         fields: # The fields for each document, usually in front matter
-          - { label: "Footer segments", name: segments, widget: list, fields: [
-              { label: "Title", name: title, widget: "string" },
-              { label: "Content", name: content, widget: "markdown" },
+          - { label: "First section title", name: addressTitle, widget: "string" }
+          - { label: "First section content", name: addressContent, widget: "markdown" }
+          - { label: "Second section title", name: hoursTitle, widget: "string" }
+          - { label: "Second section highlights", name: contactButtons, widget: list, fields: [
+              { label: "Text", name: text, widget: "string" },
+            ] }
+          - { label: "Second section content", name: hoursContent, widget: "markdown" }
+          - { label: "Third section title", name: contactTitle, widget: "string" }
+          - { label: "Buttons", name: contactButtons, widget: list, fields: [
+              { label: "Icon", name: icon, widget: "image" },
+              { label: "Alt text", name: alt, widget: "string" },
+              { label: "Text", name: text, widget: "string" },
+              { label: "Link", name: link, widget: "string" },
             ] }
       - label: "Course information"
         name: "courses"
