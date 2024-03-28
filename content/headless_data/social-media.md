@@ -9,4 +9,7 @@
   - icon: fb.svg
     alt: Facebook
     link: https://www.facebook.com/rtlschool/
+  - icon: ig.svg
+    alt: Instagram
+    link: https://www.instagram.com/rtlschool/
 ---
