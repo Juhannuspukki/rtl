@@ -1,14 +1,19 @@
 footer {
   border-top: 0.25rem solid $cheery-color;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    margin-top: 4rem;
     .footer-card {
-      margin: 0 2rem 1rem;
       h3 {
-        margin-top: 2rem;
+        margin-top: 0;
         text-align: left;
+      }
+      h4 {
+        font-size: 1.15rem;
+        margin: 0 0 0.5rem 0;
       }
       p {
         text-align: left;
@@ -24,9 +29,51 @@ footer {
           color: $cheery-color;
         }
       }
+      .contact-buttons {
+        margin-bottom: 1.5rem;
+        a {
+          display: flex;
+          align-items: center;
+          img {
+            width: 1.5rem;
+            margin-right: 0.5rem;
+          }
+          span {
+            margin-top: -4px;
+          }
+        }
+      }
+      .social-media {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        margin: auto;
+        max-width: 20rem;
+        a {
+          display: block;
+          margin: 0;
+          img {
+            display: block;
+            width: 100%;
+          }
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
     }
     @media only screen and (max-width: 712px) {
       grid-template-columns: 1fr;
+      .footer-card {
+        a, p, h3, h4 {
+          text-align: center;
+        }
+      }
+      .contact-buttons {
+        a {
+          justify-content: center;
+        }
+      }
     }
   }
 }

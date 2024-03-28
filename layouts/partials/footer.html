@@ -1,13 +1,43 @@
 {{ $headlessBundle := .Site.GetPage "/headless_data" }}
 {{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "footer.md" ) }}
+{{ $socialMedia := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "social-media.md" ) }}
 
 <footer>
   <div class="container">
-    {{ range $headlessData.Params.segments }}
-      <div class="footer-card">
-        <h3>{{ .title }}</h3>
-        {{ .content | markdownify }}
-      </div>
-    {{ end }}
+      {{ with $headlessData.Params }}
+          <div class="footer-card">
+              <h3>{{ .addressTitle }}</h3>
+              {{ .addressContent | markdownify }}
+          </div>
+          <div class="footer-card">
+              <h3>{{ .hoursTitle }}</h3>
+              {{ range .hours }}
+                  <h4>{{ .text }}</h4>
+              {{ end}}
+              {{ .hoursContent | markdownify }}
+          </div>
+          <div class="footer-card">
+              <h3>{{ .contactTitle }}</h3>
+              <div class="contact-buttons">
+                  {{ range .contactButtons }}
+                      {{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .icon) }}
+                      <a href="{{ .link | safeURL }}">
+                          <img src="{{ $imageResource.RelPermalink }}" alt="{{ .alt }}">
+                          <span>{{ .text }}</span>
+                      </a>
+                  {{ end }}
+              </div>
+              <div class="social-media">
+                  {{ with $socialMedia }}
+                      {{ range .Params.buttons }}
+                          {{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .icon) }}
+                          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+                              <img src="{{ $imageResource.RelPermalink }}" alt="{{ .alt }}">
+                          </a>
+                      {{ end }}
+                  {{ end }}
+              </div>
+          </div>
+      {{ end }}
   </div>
 </footer>
