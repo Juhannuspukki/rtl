@@ -1,6 +1,6 @@
 ---
 metaTitle: Rak Thai Language School - Learn Thai language in Bangkok or Online
-metaDescription:  We provide thai language courses for all levels of learners both at our school in Bangkok or online students worldwide. Prices starting from 7500 baht.
+metaDescription: Join our morning, afternoon or evening classes and you will be fluent in Thai sooner than you though! Affordable prices starting from 7500 baht/month.
 title: Learn Thai language in Bangkok
 subtitle: Rak Thai Language School is fun, friendly and affordable!
 banner: /uploads/rtlprofile-341-.jpg
