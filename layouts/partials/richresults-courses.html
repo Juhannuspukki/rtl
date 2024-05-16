@@ -1,3 +1,6 @@
+{{ $headlessBundle := site.GetPage "/headless_data" }}
+{{ $headlessData := $headlessBundle.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "calendar.md" ) }}
+
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -15,7 +18,36 @@
                         "@type": "Organization",
                         "name": "Rak Thai Language School",
                         "sameAs": "https://rtl-school.com"
-                    }
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "category": "Paid",
+                        "price": "7500",
+                        "priceCurrency": "THB"
+                    },
+                    "hasCourseInstance": [
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Onsite",
+                            "location": "Rak Thai Language School",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        },
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Online",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        }
+                    ]
                 }
             },
             {
@@ -30,7 +62,36 @@
                         "@type": "Organization",
                         "name": "Rak Thai Language School",
                         "sameAs": "https://rtl-school.com"
-                    }
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "category": "Paid",
+                        "price": "7500",
+                        "priceCurrency": "THB"
+                    },
+                    "hasCourseInstance": [
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Onsite",
+                            "location": "Rak Thai Language School",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        },
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Online",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        }
+                    ]
                 }
             },
             {
@@ -45,7 +106,36 @@
                         "@type": "Organization",
                         "name": "Rak Thai Language School",
                         "sameAs": "https://rtl-school.com"
-                    }
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "category": "Paid",
+                        "price": "7500",
+                        "priceCurrency": "THB"
+                    },
+                    "hasCourseInstance": [
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Onsite",
+                            "location": "Rak Thai Language School",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        },
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Online",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        }
+                    ]
                 }
             },
             {
@@ -60,7 +150,36 @@
                         "@type": "Organization",
                         "name": "Rak Thai Language School",
                         "sameAs": "https://rtl-school.com"
-                    }
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "category": "Paid",
+                        "price": "7500",
+                        "priceCurrency": "THB"
+                    },
+                    "hasCourseInstance": [
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Onsite",
+                            "location": "Rak Thai Language School",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        },
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Online",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        }
+                    ]
                 }
             },
             {
@@ -75,7 +194,36 @@
                         "@type": "Organization",
                         "name": "Rak Thai Language School",
                         "sameAs": "https://rtl-school.com"
-                    }
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "category": "Paid",
+                        "price": "7500",
+                        "priceCurrency": "THB"
+                    },
+                    "hasCourseInstance": [
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Onsite",
+                            "location": "Rak Thai Language School",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        },
+                        {
+                            "@type": "CourseInstance",
+                            "courseMode": "Online",
+                            "courseSchedule": {
+                                "@type": "Schedule",
+                                "courseWorkload": "PT60H",
+                                "repeatCount": 1,
+                                "repeatFrequency": "Monthly"
+                            }
+                        }
+                    ]
                 }
             }
         ]
