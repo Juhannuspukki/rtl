@@ -69,6 +69,14 @@
     })(navigator)
   </script>
 
+  {{ if .IsHome }}
+    {{ partial "richresults-front" . }}
+  {{ end }}
+
+  {{ if eq .RelPermalink "/courses/course-list/" }}
+    {{ partial "richresults-courses" . }}
+  {{ end }}
+
 </head>
 
 <body>
