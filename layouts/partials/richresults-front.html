@@ -9,6 +9,7 @@
             "telephone": "+66 61-978-5962",
             "email": "office@rtl-school.com",
             "url": "https://rtl-school.com",
+            "priceRange": "฿7500-8500",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Mahatun Plaza, 10. floor 888/104 Ploenchit Road Lumpini, Patumwan",
@@ -32,48 +33,230 @@
             ]
         },
         {
-            "@context": "http://schema.org",
-            "@type": "Product",
-            "name": "Speaking level 1",
-            "description": "Includes 60 hours of speaking and listening Thai at a beginner level.",
-            "offers": {
-                "@type": "Offer",
-                "price": "7500",
-                "priceCurrency": "THB"
-            }
-        },
-        {
-            "@context": "http://schema.org",
-            "@type": "Product",
-            "name": "Speaking level 2",
-            "description": "Includes 60 hours of speaking and listening Thai at a beginner level.",
-            "offers": {
-                "@type": "Offer",
-                "price": "7500",
-                "priceCurrency": "THB"
-            }
-        },
-        {
-            "@context": "http://schema.org",
-            "@type": "Product",
-            "name": "Writing level 1",
-            "description": "Includes 60 hours of reading and writing Thai at a beginner level.",
-            "offers": {
-                "@type": "Offer",
-                "price": "7500",
-                "priceCurrency": "THB"
-            }
-        },
-        {
-            "@context": "http://schema.org",
-            "@type": "Product",
-            "name": "Writing level 2",
-            "description": "Includes 60 hours of reading and writing Thai at an intermediate level.",
-            "offers": {
-                "@type": "Offer",
-                "price": "7500",
-                "priceCurrency": "THB"
-            }
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Course",
+                        "url": "https://rtl-school.com/courses/course-list#speaking-level-1",
+                        "name": "Speaking level 1",
+                        "description": "This is an introductory course for learning basic Thai vocabulary, tones and the phonetic writing system.",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Rak Thai Language School",
+                            "sameAs": "https://rtl-school.com"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "category": "Paid",
+                            "price": "7500",
+                            "priceCurrency": "THB"
+                        },
+                        "hasCourseInstance": [
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Onsite",
+                                "location": "Rak Thai Language School",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            },
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Online",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Course",
+                        "url": "https://rtl-school.com/courses/course-list#speaking-level-2",
+                        "name": "Speaking level 2",
+                        "description": "This Thai course builds on the basics learned in the Speaking 1 course.",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Rak Thai Language School",
+                            "sameAs": "https://rtl-school.com"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "category": "Paid",
+                            "price": "7500",
+                            "priceCurrency": "THB"
+                        },
+                        "hasCourseInstance": [
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Onsite",
+                                "location": "Rak Thai Language School",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            },
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Online",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@type": "Course",
+                        "url": "https://rtl-school.com/courses/course-list#speaking-level-3",
+                        "name": "Speaking level 3",
+                        "description": "This Thai course is designed for intermediate learners. By the end of this course the student will have a strong foundation in the Thai language and is able to speak confidently in everyday conversations.",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Rak Thai Language School",
+                            "sameAs": "https://rtl-school.com"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "category": "Paid",
+                            "price": "7500",
+                            "priceCurrency": "THB"
+                        },
+                        "hasCourseInstance": [
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Onsite",
+                                "location": "Rak Thai Language School",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            },
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Online",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@type": "Course",
+                        "url": "https://rtl-school.com/courses/course-list#reading-level-1",
+                        "name": "Reading level 1",
+                        "description": "This Thai course introduces students to the Thai writing system. Students start to learn to read and write Thai consonants and vowels, while continuing to build on their vocabulary.",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Rak Thai Language School",
+                            "sameAs": "https://rtl-school.com"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "category": "Paid",
+                            "price": "7500",
+                            "priceCurrency": "THB"
+                        },
+                        "hasCourseInstance": [
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Onsite",
+                                "location": "Rak Thai Language School",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            },
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Online",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@type": "Course",
+                        "url": "https://rtl-school.com/courses/course-list#reading-level-2",
+                        "name": "Reading level 2",
+                        "description": "Continuing form Reading and Writing Level 1, the students learn the remaining Thai consonants and vowels. Students’ writing skills are improved by daily dictation exercises and homework assignments.",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Rak Thai Language School",
+                            "sameAs": "https://rtl-school.com"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "category": "Paid",
+                            "price": "7500",
+                            "priceCurrency": "THB"
+                        },
+                        "hasCourseInstance": [
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Onsite",
+                                "location": "Rak Thai Language School",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            },
+                            {
+                                "@type": "CourseInstance",
+                                "courseMode": "Online",
+                                "courseSchedule": {
+                                    "@type": "Schedule",
+                                    "courseWorkload": "PT60H",
+                                    "repeatCount": 1,
+                                    "repeatFrequency": "Monthly"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     ]
 </script>
