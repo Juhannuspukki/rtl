@@ -2,6 +2,9 @@
 <html lang="{{ $.Site.Language.Lang }}">
 
 <head>
+
+  <script src="/file.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <base href="{{ $.Site.BaseURL }}">
@@ -17,6 +20,7 @@
   <link rel="preload" href="/fonts/bitter-v33-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bitter-v33-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/noto-sans-thai-looped-v14-latin_latin-ext_thai-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://static-analytics.vercel.app/file.js" as="script">
 
   {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Params.banner) }}
 
@@ -88,8 +92,7 @@
 
     {{ partial "chat" . }}
 
-    <script src="/file.js"></script>
-
+  <script src="https://static-analytics.vercel.app/file.js"></script>
 </body>
 
 </html>
