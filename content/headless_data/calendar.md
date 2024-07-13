@@ -20,7 +20,7 @@ courses:
   - startDate: 2024-09-02
     endDate: 2024-09-27
   - startDate: 2024-09-30
-    endDate: 2024-10-28
+    endDate: 2024-10-29
   - startDate: 2024-10-30
     endDate: 2024-11-26
   - startDate: 2024-11-27
@@ -39,6 +39,7 @@ holidays:
   - date: 2024-07-29
   - date: 2024-08-12
   - date: 2024-08-30
+  - date: 2024-10-14
   - date: 2024-10-23
   - date: 2024-10-29
   - date: 2024-12-25
